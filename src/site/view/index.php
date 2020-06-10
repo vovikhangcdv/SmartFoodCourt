@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title><?= $data['title'] ?></title>
+    <title>SpicyX | Home</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -250,9 +250,6 @@
             </div>
             <div class="mu-restaurant-menu-content">
               <ul class="nav nav-tabs mu-restaurant-menu">
-                <?php foreach ($list_category as $row): ?>
-                <li><a href="#<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>" data-toggle="tab"><?= htmlentities(ucfirst(strtolower($row['catname'])),ENT_QUOTES);?></a></li>  
-                <?php endforeach; ?>
                 <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
                 <li><a href="#meals" data-toggle="tab">Meals</a></li>
                 <li><a href="#snacks" data-toggle="tab">Snacks</a></li>
@@ -364,7 +361,6 @@
                    </div>
                  </div>
                 </div>
-                <?php endforeach;?>
                 <div class="tab-pane fade " id="meals">
                   <div class="mu-tab-content-area">
                     <div class="row">
@@ -781,7 +777,8 @@
     </div>
   </section>
   <!-- End Restaurant Menu -->
-
+  <!-- Start Vendor section -->
+  <!-- End Vendor section -->
   <!-- Start Reservation section -->
   <section id="mu-reservation">
     <div class="container">
