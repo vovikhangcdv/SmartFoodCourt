@@ -8,7 +8,6 @@
 - `cd /app`
 - `apt install phpmyadmin php-mbstring php-gettext`
 - `service mysql start`
-- `service apache2 start`
 - Tạo mật khẩu cho root server: `mysql_secure_installation utility`
 - Đăng nhập mysql: `mysql -u root -p` -> Nhập pass
 - `CREATE USER 'smartfoodcourt'@'localhost' IDENTIFIED BY 'bksmartfoodcourt!';`
@@ -17,3 +16,4 @@
 - `FLUSH PRIVILEGES;`
 - `exit`
 - `mysql -u smartfoodcourt -p SmartFoodCourt_DB < SmartFoodCourt_DB.sql`
+- `service apache2 start`
