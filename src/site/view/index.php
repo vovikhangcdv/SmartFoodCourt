@@ -218,11 +218,11 @@
                 <?php foreach ($list_category as $row): ?>
                 <li><a href="#<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>" data-toggle="tab"><?= htmlentities(ucfirst(strtolower($row['catname'])),ENT_QUOTES);?></a></li>  
                 <?php endforeach; ?>
-                <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
+                <!-- <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
                 <li><a href="#meals" data-toggle="tab">Meals</a></li>
                 <li><a href="#snacks" data-toggle="tab">Snacks</a></li>
                 <li><a href="#desserts" data-toggle="tab">Desserts</a></li>
-                <li><a href="#drinks" data-toggle="tab">Drinks</a></li>
+                <li><a href="#drinks" data-toggle="tab">Drinks</a></li> -->
               </ul>
 
               <!-- Tab panes -->
