@@ -329,7 +329,6 @@
                    </div>
                  </div>
                 </div>
-                <?php endforeach;?>
                 <div class="tab-pane fade " id="meals">
                   <div class="mu-tab-content-area">
                     <div class="row">
