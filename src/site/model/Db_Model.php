@@ -42,29 +42,6 @@ function get_user_by_id($Database,$id){
         return $output[0];
     } else return false;
 }
-function insert_assignment($Database,$username,$title,$description,$path_folder){
-    $user = get_user($Database,$username);
-    $creator_id = $user['id'];
-    $statement = "INSERT INTO assignment (creator_id,title,description,path_folder) values (?,?,?,?)";
-    $Database->query($statement, "isss", array($creator_id,$title,$description,$path_folder));
-    return $Database->getError();
-}
-function insert_challenge($Database,$username,$title,$description){
-    $user = get_user($Database,$username);
-    $creator_id = $user['id'];
-    $statement = "INSERT INTO challenge (creator_id,title,description) values (?,?,?)";
-    $Database->query($statement, "iss", array($creator_id,$title,$description));
-    return $Database->getError();
-}
-function get_all_assignment($Database){
-    $result = $Database->query("SELECT * FROM assignment", '', array());
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $output[] = $row;
-        }
-        return $output;
-    } else return false;
-}
 function delete_by_id($Database,$table,$id){
     $statement = "DELETE FROM ${table} where id=?";
     $result = $Database->query($statement, 'i', array($id));
@@ -135,5 +112,14 @@ function check_message($Database,$sender_id,$receiver_id){
     $statement = "UPDATE message SET checked = 1 where sender_id= ? and receiver_id = ?";
     $Database->query($statement, "ii", array($sender_id,$receiver_id));
     return $Database->getError();
+}
+function get_products_of_vendor($Database,$vendor_id){
+    $result = $Database->query("SELECT * FROM product where vendor_id = ?", 'i', array($vendor_id));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output;
+    } else return false;
 }
 ?>
