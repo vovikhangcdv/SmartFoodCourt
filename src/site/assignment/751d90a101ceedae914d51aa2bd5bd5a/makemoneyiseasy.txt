@@ -1,2 +1,0 @@
-- một thằng lìn gửi liên tục yêu cầu reset password để server spam mail đến người dùng. Và nó nhận đc 250$
-- Một đại ca bỏ qua xác thực mật khẩu lần 2 bằng cách chặn response fail từ server và sửa nó thành true, vì phần xác thực lúc sau thực hiện ở client, và nó nhận 700$ từ twitter
