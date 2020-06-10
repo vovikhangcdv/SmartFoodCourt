@@ -5,6 +5,7 @@
 - `docker run -t -d --name SmartFoodCourt --mount type=bind,source="$PWD",target=/app -p 8080:80 mattrayner/lamp:latest-1804`
 - `docker start SmartFoodCourt`
 - `docker exec -it SmartFoodCourt bash`
+- `cd /app`
 - `apt install phpmyadmin php-mbstring php-gettext`
 - `service mysql start`
 - `service apache2 start`
