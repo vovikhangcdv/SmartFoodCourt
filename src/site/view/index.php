@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1435,3 +1436,23 @@
 
   </body>
 </html>
+=======
+<?php include "header.php"; ?>
+
+<?php include "pre_loader.php"; ?>
+<?php include "slider.php"; ?>
+<?php include "about_us.php"; ?>
+<?php include "counter.php"; ?>
+<?php include "menu.php"; ?>
+<?php include "reservation.php"; ?>
+<?php include "gallery.php"; ?>
+<?php include "client_testimonical.php"; ?>
+<?php include "subscription.php"; ?>
+<?php include "chief.php"; ?>
+<?php include "lastest_news.php"; ?>
+<?php include "contact.php"; ?>
+<?php include "map.php"; ?>
+<?php include "another.php"; ?>
+
+<?php include "footer.php"; ?>
+>>>>>>> 47375f9090e77d12b9d50e32f952468762e6ec96
