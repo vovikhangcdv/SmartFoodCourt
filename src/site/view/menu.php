@@ -48,7 +48,8 @@
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="#"><?= htmlentities($product['productname'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
-                                <p><?= htmlentities($product['description'],ENT_QUOTES)?></p>
+                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
+                                <br><div style="padding-top:10px"><a href="#" class="mu-readmore-btn" tabindex="-1">Add to cart</a><div>
                             </div>
                             </div>
                         </li>
@@ -75,7 +76,8 @@
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="#"><?= htmlentities($product['productname'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
-                                <p><?= htmlentities($product['description'],ENT_QUOTES)?></p>
+                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
+                                <br><div style="padding-top:10px"><a href="#" class="mu-readmore-btn" tabindex="1">Add to cart</a><div>
                             </div>
                             </div>
                         </li>
