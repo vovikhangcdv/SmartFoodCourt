@@ -12,7 +12,8 @@ class Index_Controller extends Base_Controller {
             $data['list_vendor'][$list_vendor[$i]['id']]['products'] = get_products_of_vendor($Database,$list_vendor[$i]['id']);
 
         } 
-        $data['vendor_id'] = 1;
+        if(isset($_GET['vendor_id'])) $data['vendor_id'] = intval($_GET['vendor_id']); 
+        else $data['vendor_id'] = 1;
         $this->view->load('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('about_us',$data);
