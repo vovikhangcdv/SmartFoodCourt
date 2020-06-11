@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Counter Section -->
+  <!-- Start Counter Section -->
   <section id="mu-counter">
     <div class="mu-counter-overlay">
       <div class="container">
@@ -43,4 +42,3 @@
     </div>
   </section>
   <!-- End Counter Section -->
-</body>

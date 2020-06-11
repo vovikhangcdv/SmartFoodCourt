@@ -1,5 +1,4 @@
-<body>
-    <!-- Start About us -->
+  <!-- Start About us -->
   <section id="mu-about-us">
     <div class="container">
       <div class="row">
@@ -44,4 +43,3 @@
     </div>
   </section>
   <!-- End About us -->
-</body>

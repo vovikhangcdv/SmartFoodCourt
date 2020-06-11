@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Reservation section -->
+  <!-- Start Reservation section -->
   <section id="mu-reservation">
     <div class="container">
       <div class="row">
@@ -72,4 +71,3 @@
     </div>
   </section>  
   <!-- End Reservation section -->
-</body>

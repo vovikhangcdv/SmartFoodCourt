@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Chef Section -->
+  <!-- Start Chef Section -->
   <section id="mu-chef">
     <div class="container">
       <div class="row">
@@ -157,4 +156,3 @@
     </div>
   </section>
   <!-- End Chef Section -->
-</body>

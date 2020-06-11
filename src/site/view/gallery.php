@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Gallery -->
+  <!-- Start Gallery -->
   <section id="mu-gallery">
     <div class="container">
       <div class="row">
@@ -159,4 +158,3 @@
     </div>
   </section>
   <!-- End Gallery -->
-</body>

@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Subscription section -->
+  <!-- Start Subscription section -->
   <section id="mu-subscription">
     <div class="container">
       <div class="row">
@@ -15,4 +14,3 @@
     </div>    
   </section>
   <!-- End Subscription section -->
-</body>

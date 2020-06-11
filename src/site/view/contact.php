@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Contact section -->
+  <!-- Start Contact section -->
   <section id="mu-contact">
     <div class="container">
       <div class="row">
@@ -65,4 +64,3 @@
     </div>
   </section>
   <!-- End Contact section -->
-</body>

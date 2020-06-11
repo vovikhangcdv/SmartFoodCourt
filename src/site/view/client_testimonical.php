@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Client Testimonial section -->
+  <!-- Start Client Testimonial section -->
   <section id="mu-client-testimonial">
     <div class="mu-overlay">
       <div class="container">
@@ -55,4 +54,3 @@
     </div>
   </section>
   <!-- End Client Testimonial section -->
-</body>

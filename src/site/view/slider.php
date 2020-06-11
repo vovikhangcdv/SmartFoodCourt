@@ -1,5 +1,4 @@
-<body>
-    <!-- Start slider  -->
+  <!-- Start slider  -->
   <section id="mu-slider">
     <div class="mu-slider-area"> 
       <!-- Top slider -->
@@ -47,4 +46,3 @@
     </div>
   </section>
   <!-- End slider  -->
-</body>

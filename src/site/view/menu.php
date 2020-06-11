@@ -1,5 +1,4 @@
-<body>
-    <!-- Start Restaurant Menu -->
+  <!-- Start Restaurant Menu -->
   <section id="mu-restaurant-menu">
     <div class="container">
       <div class="row">
@@ -41,7 +40,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -55,7 +54,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -69,7 +68,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -89,7 +88,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -103,7 +102,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -117,7 +116,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -143,7 +142,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -157,7 +156,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -171,7 +170,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -191,7 +190,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -205,7 +204,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -219,7 +218,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -245,7 +244,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -259,7 +258,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -273,7 +272,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -293,7 +292,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -307,11 +306,11 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
-                             <li>
+                             <li>b
                               <div class="media">
                                 <div class="media-left">
                                   <a href="#">
@@ -321,7 +320,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -347,7 +346,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -361,7 +360,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -375,7 +374,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -395,7 +394,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -409,7 +408,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -423,7 +422,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -449,7 +448,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -463,7 +462,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -477,7 +476,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -497,7 +496,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -511,7 +510,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
                                   <span class="mu-menu-price">$11.95</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -525,7 +524,7 @@
                                 <div class="media-body">
                                   <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
                                   <span class="mu-menu-price">$15.85</span>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
                                 </div>
                               </div>
                             </li>
@@ -543,4 +542,3 @@
     </div>
   </section>
   <!-- End Restaurant Menu -->
-</body>

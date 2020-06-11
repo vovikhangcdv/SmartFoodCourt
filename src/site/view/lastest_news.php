@@ -1,6 +1,5 @@
-<body>
-<!-- Start Latest News -->
-<section id="mu-latest-news">
+  <!-- Start Latest News -->
+  <section id="mu-latest-news">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -62,4 +61,3 @@
     </div>
   </section>
   <!-- End Latest News -->
-</body>
