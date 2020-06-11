@@ -15,11 +15,6 @@
                 <?php foreach ($list_category as $row): ?>
                 <li><a href="#<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>" data-toggle="tab"><?= htmlentities(ucfirst(strtolower($row['catname'])),ENT_QUOTES);?></a></li>  
                 <?php endforeach; ?>
-                <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
-                <li><a href="#meals" data-toggle="tab">Meals</a></li>
-                <li><a href="#snacks" data-toggle="tab">Snacks</a></li>
-                <li><a href="#desserts" data-toggle="tab">Desserts</a></li>
-                <li><a href="#drinks" data-toggle="tab">Drinks</a></li>
               </ul>
 
               <!-- Tab panes -->
@@ -126,7 +121,7 @@
                    </div>
                  </div>
                 </div>
-                <div class="tab-pane fade " id="meals">
+                <div class="tab-pane fade " id="lunch">
                   <div class="mu-tab-content-area">
                     <div class="row">
                       <div class="col-md-6">
@@ -228,7 +223,7 @@
                    </div>
                  </div>
                 </div>
-                <div class="tab-pane fade " id="snacks">
+                <div class="tab-pane fade " id="dinner">
                   <div class="mu-tab-content-area">
                     <div class="row">
                       <div class="col-md-6">
@@ -330,7 +325,7 @@
                    </div>
                  </div>
                 </div>
-                <div class="tab-pane fade " id="desserts">
+                <div class="tab-pane fade " id="beverages">
                   <div class="mu-tab-content-area">
                     <div class="row">
                       <div class="col-md-6">
@@ -417,108 +412,6 @@
                                 <div class="media-left">
                                   <a href="#">
                                     <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                  <span class="mu-menu-price">$15.85</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>   
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                </div>
-                <div class="tab-pane fade " id="drinks">
-                  <div class="mu-tab-content-area">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="mu-tab-content-left">
-                          <ul class="mu-menu-item-nav">
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                  <span class="mu-menu-price">$15.85</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                             <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-10.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                  <span class="mu-menu-price">$11.95</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                             <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                  <span class="mu-menu-price">$15.85</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>   
-                        </div>
-                      </div>
-                     <div class="col-md-6">
-                       <div class="mu-tab-content-right">
-                          <ul class="mu-menu-item-nav">
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                  <span class="mu-menu-price">$15.85</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                             <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-10.jpg" alt="img">
-                                  </a>
-                                </div>
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                  <span class="mu-menu-price">$11.95</span>
-                                  <br><br><button type="button" class="btn btn-primary">Add to cart</button>
-                                </div>
-                              </div>
-                            </li>
-                             <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <a href="#">
-                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
                                   </a>
                                 </div>
                                 <div class="media-body">
