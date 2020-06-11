@@ -12,18 +12,26 @@ class Index_Controller extends Base_Controller {
             $data['list_vendor'][$list_vendor[$i]['id']]['products'] = get_products_of_vendor($Database,$list_vendor[$i]['id']);
 
         } 
-        // var_dump($data['list_vendor'][1]['products']);
-        // $this->view->load('test',$data);
         $data['vendor_id'] = 1;
-        $this->view->load('index',$data);
-        // $this->view->load('header',$data);
-        // $this->view->load('core',$data);
-        // $this->view->load('footer',$data);
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('about_us',$data);
+        $this->view->load('counter',$data);
+        $this->view->load('menu',$data);
+        $this->view->load('reservation',$data);
+        $this->view->load('gallery',$data);
+        $this->view->load('client_testimonical',$data);
+        $this->view->load('subscription',$data);
+        $this->view->load('chief',$data);
+        $this->view->load('lastest_news',$data);
+        $this->view->load('contact',$data);
+        $this->view->load('map',$data);
+        $this->view->load('another',$data);
+        $this->view->load('footer',$data);
     }
     public function menuAction(){
         global $Database;
         $this->model->load('Db');
-        // $this->config->load('debug_config');
         $data = array('title' => 'BK Smart Food Court');
         $list_vendor = get_all_by_tablename($Database,'vendor');
         $number_vendor = count($list_vendor);
@@ -34,6 +42,7 @@ class Index_Controller extends Base_Controller {
         }
         $data['vendor_id'] = 1; 
         $this->view->load('header',$data);
+        $this->view->load('slider',$data);
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
     }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base href="/public/">
+  <base href="/public/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title><?= $data['title'] ?></title>
+    <title><?= $title?></title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -40,8 +40,22 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Start header section -->
-    <header id="mu-header">  
+  </head>
+  <body>  
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="mu-preloader">
+      <img src="assets/img/preloader.gif" alt=" loader img">
+    </div>
+  </div>
+  <!--START SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>
+      <span>Top</span>
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
+  <!-- Start header section -->
+  <header id="mu-header">  
     <nav class="navbar navbar-default mu-main-navbar" role="navigation">  
       <div class="container">
         <div class="navbar-header">
@@ -76,8 +90,7 @@
           </ul>                            
         </div><!--/.nav-collapse -->       
       </div>          
-      </nav> 
-      </header>
-    <!-- End header section -->
-  </head>
-  <body>
+    </nav> 
+  </header>
+  <!-- End header section -->
+ 
