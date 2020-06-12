@@ -49,18 +49,10 @@ class Index_Controller extends Base_Controller {
         $this->view->load('footer',$data);
     }
 
-<<<<<<< HEAD
     public function historyAction(){
         $this->view->load('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('history_page',$data);
-=======
-    public function testAction() {
-        $data = "";
-        $this->view->load('header',$data);
-        $this->view->load('slider',$data);
-        $this->view->load('cart',$data);
->>>>>>> c5abd8994e0043d9b7ca0908a26cfc59d9c70417
         $this->view->load('footer',$data);
     }
 }
