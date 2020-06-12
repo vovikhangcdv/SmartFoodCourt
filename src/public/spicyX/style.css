@@ -30,13 +30,8 @@
 #RESPONSIVE DESIGN
 */
 /* BASE - Base tyles, Variables, Mixins, etc. */
-body {
-  background-color: #ffffff;
-  font-family: "Prata", serif;
-  color: #333333;
-  font-size: 15px;
-  overflow-x: hidden;
-}
+/* import the necessary Bootstrap files */
+
 
 .no-padding {
   padding: 0;
