@@ -69,6 +69,11 @@ class Index_Controller extends Base_Controller {
         $this->view->load('owner_view_report',$data);
         $this->view->load('footer',$data);
     }
-}
-    
+    public function managerAction(){
+        $data ="";
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('manager',$data);
+        $this->view->load('footer',$data);
+    }
 }
