@@ -50,25 +50,12 @@ class Index_Controller extends Base_Controller {
     }
 
     public function historyAction(){
-        $this->view->load('header');
-        $this->view->load('slider');
-        $this->view->load('history_page');
-        $this->view->load('footer');
-    }
-    public function cartAction() {
-        $data = "";
         $this->view->load('header',$data);
         $this->view->load('slider',$data);
-        $this->view->load('cart',$data);
+        $this->view->load('modify_menu',$data);
         $this->view->load('footer',$data);
     }
-    public function owner_view_reportAction() {
-        $data = "";
-        $this->view->load('header',$data);
-        $this->view->load('slider',$data);
-        $this->view->load('owner_view_report',$data);
-        $this->view->load('footer',$data);
-    }
+<<<<<<< HEAD
     public function managerAction(){
         $data ="";
         $this->view->load('header',$data);
@@ -76,4 +63,7 @@ class Index_Controller extends Base_Controller {
         $this->view->load('manager',$data);
         $this->view->load('footer',$data);
     }
+=======
+
+>>>>>>> cd45c67ee8babe82cf8826732af515f4c720a4c9
 }
