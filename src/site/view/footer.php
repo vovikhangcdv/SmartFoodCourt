@@ -38,6 +38,11 @@
 
   <!-- Custom js -->
   <script src="assets/js/custom.js"></script> 
-
+  <script>
+  function submit_form(id_form,id_input,value_input){
+      document.getElementById(id_input).value = value_input;
+      document.getElementById(id_form).submit(); // Form submission
+  }
+  </script>
   </body>
 </html>

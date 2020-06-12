@@ -79,14 +79,20 @@
             <li><a href="#mu-chef">OUR TEAM</a></li>
             <li><a href="#mu-latest-news">BLOG</a></li> 
             <li><a href="#mu-contact">CONTACT</a></li> 
+            xx <?= $_SESSION['username']; ?> xx
+            <?php if (isset($_SESSION['role'])): ?>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">PAGE <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html"><?= htmlspecialchars($header['user']['fullname'], ENT_QUOTES, 'UTF-8'); ?><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
                 <li><a href="blog-archive.html">BLOG</a></li>
                 <li><a href="blog-single.html">BLOG DETAILS</a></li>
-                <li><a href="404.html">404 PAGE</a></li>                                            
+                <li><a href="<?= PATH_INDEX ?>?c=logout">Logout</a></li>                                            
               </ul>
             </li>
+            <?php else: ?>
+            <li><a href="<?= PATH_INDEX ?>?c=signup">SIGN UP</a></li>
+            <li><a href="<?= PATH_INDEX ?>?c=login">LOGIN</a></li> 
+            <?php endif;?>
           </ul>                            
         </div><!--/.nav-collapse -->       
       </div>          

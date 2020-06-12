@@ -25,9 +25,9 @@ class Signup_Controller extends Base_Controller
                     if (!isset($_POST['token']) or ($_POST['token']!==$_SESSION['token'])) die('Invalid token!');
                     $data['message'] = $this->auth->signup($_POST['username'],$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt'],intval($_POST['role']));
                 }
-                else $data['message'] = $this->auth->signup($_POST['username'],$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt'],2);
+                else $data['message'] = $this->auth->signup($_POST['username'],$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt'],4);
                 $data['return'] = ($data['message'] == "Sign up successfully!");
-                $data['message'] = $data['message']." <a href='../index.php'> Login</a>";
+                $data['message'] = $data['message']." <a href='../../index.php'> Login</a>";
             }
         }
         if ($this->auth->isAdmin()){
