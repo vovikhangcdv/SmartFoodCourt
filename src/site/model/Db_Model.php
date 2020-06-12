@@ -140,4 +140,29 @@ function get_vendor($Database) {
             return $output;
         } else return false;
     }
+function get_max_order_id($Database){
+    $statement = "SELECT max(order_id) as max from order";
+    $result = $Database->query($statement, "", array());
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
+function insert_order($Database,$order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order){
+    $statement = "INSERT INTO order (order_id,vendor_id,customer_id,product_id,quantity,timestamp_order) values (?,?,?,?,?,?)";
+    $Database->query($statement, "iiiiii", array($order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order));
+    return $Database->getError();
+}
+function get_by_column($Database,$table,$column,$value){
+    $statement = "SELECT * from ${table} where ${column}=?";
+    $result = $Database->query($statement, "i", array($value));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
 ?>
