@@ -19,21 +19,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach ($orders as $id=>$order): ?>
                                     <tr>
                                         <td>
                                             <span class="cart-thumb-image">
-                                                <img align="left" style="padding:3px" alt="Vegetable Soup" width="100" height="100" src="assets/img/product/21.jpg">
+                                                <img align="left" style="padding:3px" alt="Vegetable Soup" width="100" height="100" src="<?= $order['product']['photo'] ?>">
                                             </span>
                                             <div style="padding:2px">
-                                                <span class="cart-product-name">Tên Sản Phẩm</span>
+                                                <span class="cart-product-name"><?= $order['product']['product_name'] ?></span>
                                                 <br>
                                                 <span class="cart-product-unit-price">
                                                     <span class="cart-item-title">Unit Price:</span>
-                                                    <span class="cart-item-value">Đơn giá</span>
+                                                    <span class="cart-item-value"><?= $order['product']['price'] ?> VNĐ</span>
                                                 </span>
                                                 <br>
                                                 <span class="cart-product-sku">
-                                                    <span class="cart-item-value">Mô tả</span>
+                                                    <span class="cart-item-value"><?= $order['product']['description'] ?></span>
                                                 </span>
                                             </div>
                                         </td>
@@ -45,43 +46,16 @@
                                             </a>
                                         </td>
 
-                                        <td style="text-align:center; vertical-align:middle;" class="cart-line-subtotal">Tổng tiền</td>
+                                        <td style="text-align:center; vertical-align:middle;" class="cart-line-subtotal"><?= $order['money'] ?></td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="cart-thumb-image">
-                                                <img align="left" style="padding:3px" alt="Vegetable Soup" width="100" height="100" src="assets/img/product/21.jpg">
-                                            </span>
-                                            <div style="padding:2px">
-                                                <span class="cart-product-name">Tên Sản Phẩm</span>
-                                                <br>
-                                                <span class="cart-product-unit-price">
-                                                    <span class="cart-item-title">Unit Price:</span>
-                                                    <span class="cart-item-value">Đơn giá</span>
-                                                </span>
-                                                <br>
-                                                <span class="cart-product-sku">
-                                                    <span class="cart-item-value">Mô tả</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td style="text-align:center; vertical-align:middle;">
-                                            <div class="product-qty"><input style="width:50px" type="number" name="quantities[1605]" value="1" class="input-mini " min="0" step="1"></div>
-                                            <br>
-                                            <a class="btn btn-small btn-danger btn-xs j2store-remove remove-icon" href="/joomla/lt-restaurant/index.php/component/j2store/carts/remove?cartitem_id=1605">
-                                                <i class="fa fa-trash-o"></i>
-                                            </a>
-                                        </td>
-
-                                        <td style="text-align:center; vertical-align:middle;" class="cart-line-subtotal">Tổng tiền</td>
-                                    </tr>
+                                    <?php endforeach;?>
                                 </tbody>
                             </table>
                         </aside>
                         <br>
                         <div style="text-align: center;" class="j2store-cart-buttons">
                             <div class="buttons-left">
-                                <a href="#" class="mu-readmore-btn" tabindex="0">Continue Choose food</a>
+                                <a href="<?= PATH_INDEX ?>?c=order&a=menu" class="mu-readmore-btn" tabindex="0">Continue Choose food</a>
 
                                 <a href="#" class="mu-readmore-btn" tabindex="0">Update</a>
                             </div>
@@ -102,17 +76,18 @@
                                 <tbody>
                                     <tr valign="top">
                                         <th style="text-align:center" scope="row" colspan="2">Subtotal</th>
-                                        <td style="text-align:right">Tiền phụ thu</td>
+                                        <td style="text-align:right"><?= $additional_money ?></td>
                                     </tr>
                                     <tr valign="top">
                                         <th style="text-align:center" scope="row" colspan="2">Total</th>
-                                        <td style="text-align:right">Tổng cộng</td>
+                                        <td style="text-align:right"><?= $total ?></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </aside>
                         <br>
                         <div style="text-align:center" class="buttons-right">
+                            <a href="<?= PATH_INDEX?>?c=order&a=cancel" class="mu-readmore-btn" tabindex="0">Cancel</a>
                             <a href="#" class="mu-readmore-btn" tabindex="0">Pay</a>
                         </div>
                     </div>

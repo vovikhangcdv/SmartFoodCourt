@@ -87,7 +87,6 @@
                     </div>
                 </div>
                 </div>
->>>>>>> 28daff7b97284b444e2dcf770509aef12f56d36a
             </div>
             <?php endforeach; ?>
             </div>

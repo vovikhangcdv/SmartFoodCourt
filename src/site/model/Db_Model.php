@@ -165,4 +165,13 @@ function get_by_column($Database,$table,$column,$value){
         return $output[0];
     } else return false;
 }
+function get_order_by_order_id($Database,$order_id){
+    $result = $Database->query("SELECT * FROM order where order_id = ?", 'i', array($order_id));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output;
+    } else return false;
+}
 ?>

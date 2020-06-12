@@ -9,20 +9,42 @@ class Order_Controller extends Base_Controller
     }
     private function is_empty_card()
     {
-        return (!$this->is_set_vendor() or count($_SESSION['list_orders']) === 0);
+        return (!$this->is_set_vendor() or count($_SESSION['list_products']) === 0);
     }
     private function clean_up()
     {
         unset($_SESSION['vendor']);
-        unset($_SESSION['list_orders']);
+        unset($_SESSION['list_products']);
     }
     public function indexAction()
     {
+                $this->config->load('debug_config');
+                $data=array();
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('list_vendor',$data);
+        $this->view->load('footer',$data);
+    }
+    public function cartAction()
+    {
         # Show vendors
+        if (!$this->is_set_vendor()) return $this->indexAction();
+        // $this->config->load('debug_config');
         global $Database;
         $this->model->load('Db');
-        $data['vendor'] = get_all_by_tablename($Database, 'vendor');
-        // $this->load_header('header',$data);
+        $this->library->load('Order');
+        $temp_order = new Order_Library();
+        $temp_order->generate_temp_order($Database,$_SESSION['vendor'],$_SESSION['list_products']);
+        $data['vendor'] = $temp_order->get_vendor();
+        $data['orders'] = $temp_order->get_orders();
+        $data['additional_money'] = $temp_order->get_additional_money();
+        $data['total'] = $temp_order->get_total();
+        // die(var_dump($data));
+
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('cart',$data);
+        $this->view->load('footer',$data);
     }
 
     public function set_vendorAction()
@@ -38,29 +60,29 @@ class Order_Controller extends Base_Controller
         else return $this->menuAction();
     }
 
-    public function delete_cartAction(){
+    public function cancelAction(){
         $this->clean_up();
+        $this->indexAction();
     }
     public function addAction()
     {
         if (!$this->is_set_vendor()) return $this->indexAction();
         global $Database;
         $this->model->load('Db');
-        $this->config->load('debug_config');
+        // $this->config->load('debug_config');
         if (isset($_REQUEST['product_id'])) {
             $product = get_by_column($Database, 'product', 'product_id', intval($_REQUEST['product_id']));
             if (isset($_REQUEST['quantity'])) $quantity = intval($_REQUEST['quantity']);
             else $quantity = 1;
-            var_dump($product);
-            if ($product and $product['vendor_id'] === $_SESSION['vendor']['id'] and $product['is_ready'] === 1) $_SESSION['list_orders'][$product['product_id']] = $quantity;
-            var_dump($_SESSION);
+            if ($product and $product['vendor_id'] === $_SESSION['vendor']['id'] and $product['is_ready'] === 1) $_SESSION['list_products'][$product['product_id']] = $quantity;
         }
+        $this->cartAction();
     }
 
     public function removeAction()
     {
         if (!$this->is_set_vendor()) return $this->indexAction();
-        unset($_SESSION['list_orders'][intval($_REQUEST['product_id'])]);
+        unset($_SESSION['list_products'][intval($_REQUEST['product_id'])]);
     }
 
     public function menuAction()
@@ -91,7 +113,7 @@ class Order_Controller extends Base_Controller
         $order_id = get_max_order_id($Database);
         if (!$order_id) die('Error');
         $new_order_id = $order_id + 1;
-        foreach ($_SESSION['list_orders'] as $product_id => $quantity) {
+        foreach ($_SESSION['list_products'] as $product_id => $quantity) {
             if (get_by_column($Database, 'product', 'product_id', intval($product_id))['is_ready'] !== 0) insert_order($Database, $new_order_id, $_SESSION['vendor']['id'], get_user($Database, $_SESSION['username'])['id'], $product_id, $quantity, time());
         }
     }
