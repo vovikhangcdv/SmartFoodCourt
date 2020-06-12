@@ -14,7 +14,7 @@ class Index_Controller extends Base_Controller {
         } 
         if(isset($_GET['vendor_id'])) $data['vendor_id'] = intval($_GET['vendor_id']); 
         else $data['vendor_id'] = 1;
-        $this->view->load('header',$data);
+        $this->load_header('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('about_us',$data);
         $this->view->load('counter',$data);
@@ -47,7 +47,5 @@ class Index_Controller extends Base_Controller {
         $this->view->load('slider',$data);
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
-    }
-
-    
+    }    
 }
