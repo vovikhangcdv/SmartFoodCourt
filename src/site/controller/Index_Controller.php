@@ -48,4 +48,27 @@ class Index_Controller extends Base_Controller {
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
     }
+<<<<<<< HEAD
+=======
+    public function historyAction(){
+        $this->view->load('header');
+        $this->view->load('slider');
+        $this->view->load('history_page');
+        $this->view->load('footer');
+    }
+    public function cartAction() {
+        $data = "";
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('cart',$data);
+        $this->view->load('footer',$data);
+    }
+    public function owner_view_reportAction() {
+        $data = "";
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('owner_view_report',$data);
+        $this->view->load('footer',$data);
+    }
+>>>>>>> e61cbbd36c752a89d8d5457091dffd7c83f38220
 }
