@@ -87,7 +87,7 @@
                             }
                         </style>
                         <span class="mu-subtitle">Modify</span>
-                        <h2 >MENU</h2>
+                        <h2>MENU</h2>
                         <i class="fa fa-spoon"></i>
                         <span class="mu-title-bar"></span>
                     </div>
@@ -151,11 +151,93 @@
                                 <td style="vertical-align: middle;"></td>
                                 <td style="vertical-align: middle;"></td>
                                 <td style="vertical-align: middle;"></td>
-                                <td style="vertical-align: middle;"><button type="button" style="size: 200%;background-color:rgb(204, 185, 11);color:white">Add Food</button></td>
+                                <td style="vertical-align: middle;"><button type="button" data-toggle="modal" data-target="#addFood" style="size: 200%;background-color:rgb(204, 185, 11);color:white">Add Food</button></td>
                             </tr>
                         </tbody>
                     </table>
 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button style="position: absolute; right: 13%;background-color:rgb(204, 185, 11);color:white"  type="button" data-toggle="modal" data-target="#addCategory">Add Category</button>
+
+
+
+    <style>
+        label {
+            display: inline-block;
+            width: 140px;
+            text-align: right;
+        }
+    </style>
+    <div class="modal fade" id="addFood" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold" style="color:rgb(204, 185, 11) ;">ADD FOOD</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="block">
+                    <label>Name</label>
+                    <input type="text" />
+                </div>
+                <div class="block">
+                    <label>Catagory</label>
+                    <select style="width: 184px;
+            text-align: right;">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">saab</option>
+                        <option value="opel">opel</option>
+                        <option value="audi">opel</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <label>Description</label>
+                    <input type="text" />
+                </div>
+                <div class="block">
+                    <label>Price</label>
+                    <input type="number" />
+
+                </div>
+                <div class="block">
+                    <label>Status</label>
+                    <select style="width: 184px;text-align: right;">
+                        <option value=1>Enable</option>
+                        <option value=0>Disable</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <label>Image</label>
+                    <input type="" />
+                </div>
+                <button class="btn btn-default">Browse</button>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default" style="background-color:rgb(204, 185, 11) ;">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold" style="color:rgb(204, 185, 11) ;">ADD CATEGORY</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="block">
+                    <label>Name</label>
+                    <input type="text" />
+
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default" style="background-color:rgb(204, 185, 11) ;">ADD</button>
                 </div>
             </div>
         </div>

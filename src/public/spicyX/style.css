@@ -31,7 +31,13 @@
 */
 /* BASE - Base tyles, Variables, Mixins, etc. */
 /* import the necessary Bootstrap files */
+.modal-notify .modal-header {
+  border-radius: 3px 3px 0 0;
+}
 
+.modal-notify .modal-content {
+  border-radius: 3px;
+}
 
 .no-padding {
   padding: 0;

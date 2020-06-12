@@ -49,21 +49,10 @@ class Index_Controller extends Base_Controller {
         $this->view->load('footer',$data);
     }
 
-    public function historyAction(){
+    public function modify_menuAction(){
         $this->view->load('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('modify_menu',$data);
         $this->view->load('footer',$data);
     }
-<<<<<<< HEAD
-    public function managerAction(){
-        $data ="";
-        $this->view->load('header',$data);
-        $this->view->load('slider',$data);
-        $this->view->load('manager',$data);
-        $this->view->load('footer',$data);
-    }
-=======
-
->>>>>>> cd45c67ee8babe82cf8826732af515f4c720a4c9
 }
