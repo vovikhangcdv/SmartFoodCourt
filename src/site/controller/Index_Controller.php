@@ -48,4 +48,12 @@ class Index_Controller extends Base_Controller {
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
     }
+
+    public function testAction() {
+        $data = "";
+        $this->view->load('header',$data);
+        $this->view->load('slider',$data);
+        $this->view->load('cart',$data);
+        $this->view->load('footer',$data);
+    }
 }
