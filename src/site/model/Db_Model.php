@@ -122,7 +122,16 @@ function get_products_of_vendor($Database,$vendor_id){
         return $output;
     } else return false;
 }
-function get_vendor_user($Database) {
+function get_category_products_of_vendor($Database,$vendor_id){
+    $result = $Database->query("SELECT * FROM category_product where vendor_id = ?", 'i', array($vendor_id));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output;
+    } else return false;
+}
+function get_vendor($Database) {
     $result = $Database->query("SELECT * FROM user", '', array());
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {

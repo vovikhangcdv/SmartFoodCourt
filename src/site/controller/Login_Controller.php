@@ -7,12 +7,17 @@ class Login_Controller extends Base_Controller {
             if ($this->auth->isLogin()) $this->success($message);
             else $this->fail($message);
         } else {
-            $this->view->load('login', array("title" => "Login", "action" => "../index.php?c=login"));
+            $data = ['title' => 'Login', 'action' => '../index.php?c=login'];
+            // $this->view->load('header',$data);
+            $this->view->load('signin', array("title" => "Login", "action" => "../index.php?c=login"));
+            // $this->view->load('footer',$data);
         }
     }
     private function fail($message = NULL) {
         $data = array('title' => 'Login', 'message' => $message, 'action' => '../index.php?c=login', 'return' => false);
+        $this->view->load('header',$data);
         $this->view->load('login', $data);
+        $this->view->load('footer',$data);
     }
     private function success($message = NULL) {
         $data = array('title' => 'Welcome Index', 'message' => $message, 'return' => true);

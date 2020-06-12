@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 10, 2020 at 06:52 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Generation Time: Jun 11, 2020 at 09:21 AM
+-- Server version: 5.7.26-0ubuntu0.18.04.1-log
+-- PHP Version: 7.3.6-1+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `category` (
   `categoryid` int(11) NOT NULL,
-  `catname` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `catname` varchar(30) COLLATE utf8_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `category`
@@ -41,7 +41,33 @@ INSERT INTO `category` (`categoryid`, `catname`) VALUES
 (4, 'BREAKFAST'),
 (5, 'LUNCH'),
 (6, 'DINNER'),
-(7, 'BEVERAGES');
+(7, 'DESSERT');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category_product`
+--
+
+CREATE TABLE `category_product` (
+  `id` int(11) NOT NULL,
+  `catname` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `vendor_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Dumping data for table `category_product`
+--
+
+INSERT INTO `category_product` (`id`, `catname`, `vendor_id`) VALUES
+(1, 'BREAKFAST', 1),
+(2, 'LUNCH', 1),
+(3, 'DINNER', 1),
+(4, 'DRINK', 1),
+(5, 'BREAKFAST', 2),
+(6, 'LUNCH', 2),
+(7, 'DINNER', 2),
+(8, 'DESSERT', 2);
 
 -- --------------------------------------------------------
 
@@ -67,10 +93,11 @@ CREATE TABLE `orders` (
 CREATE TABLE `product` (
   `productid` int(11) NOT NULL,
   `categoryid` int(1) NOT NULL,
-  `productname` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `productname` varchar(30) COLLATE utf8_vietnamese_ci NOT NULL,
+  `description` text COLLATE utf8_vietnamese_ci NOT NULL,
   `price` double NOT NULL,
-  `photo` varchar(150) CHARACTER SET utf8 NOT NULL,
-  `vendor` int(11) NOT NULL,
+  `photo` varchar(150) COLLATE utf8_vietnamese_ci NOT NULL,
+  `vendor_id` int(11) NOT NULL,
   `is_ready` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
@@ -78,16 +105,15 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`productid`, `categoryid`, `productname`, `price`, `photo`, `vendor`, `is_ready`) VALUES
-(14, 5, 'Com Suon', 40, 'upload/com-suong.jpg', 0, 0),
-(15, 5, 'Pho', 45, 'upload/pho.jpg', 0, 0),
-(16, 5, 'Bun Bo Hue', 45, 'upload/bun-bo-hue.jpg', 0, 0),
-(18, 7, 'Mojito', 200, 'upload/http _cdn.cnn.com_cnnnext_dam_assets_170224172523-mojito_1539097580.jpg', 0, 0),
-(19, 7, 'Sex On The Beach', 250, 'upload/http _cdn.cnn.com_cnnnext_dam_assets_170227111426-sex-on-the-beach-cocktail_1539097662.jpg', 0, 0),
-(20, 6, 'Com Chien', 450, 'upload/com-chien.jpg', 0, 0),
-(21, 4, 'Chao', 30, 'upload/chao.jpg', 0, 0),
-(22, 4, 'Bun Rieu', 35, 'upload/bun-rieu.jpeg', 0, 0),
-(23, 7, 'Coca-Cola', 80, 'upload/cocacola_1539097796.jpg', 0, 0);
+INSERT INTO `product` (`productid`, `categoryid`, `productname`, `description`, `price`, `photo`, `vendor_id`, `is_ready`) VALUES
+(14, 2, 'Com Suon', '', 40, 'assets/img/product/14.jpg', 1, 0),
+(15, 2, 'Pho', '', 45, 'assets/img/product/15.jpg', 1, 0),
+(16, 3, 'Bun Bo Hue', '', 45, 'assets/img/product/16.jpg', 1, 0),
+(18, 4, 'Mojito', '', 200, 'assets/img/product/18.jpg', 1, 0),
+(20, 2, 'Com Chien', '', 450, 'assets/img/product/20.jpg', 1, 0),
+(21, 1, 'Chao', '', 30, 'assets/img/product/21.jpg', 1, 0),
+(22, 1, 'Bun Rieu', '', 35, 'assets/img/product/22.jpg', 1, 0),
+(23, 4, 'Coca-Cola', '', 80, 'assets/img/product/23.jpg', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -97,10 +123,10 @@ INSERT INTO `product` (`productid`, `categoryid`, `productname`, `price`, `photo
 
 CREATE TABLE `purchase` (
   `purchaseid` int(11) NOT NULL,
-  `customer` varchar(50) NOT NULL,
+  `customer` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
   `total` double NOT NULL,
   `date_purchase` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `purchase`
@@ -121,7 +147,7 @@ CREATE TABLE `purchase_detail` (
   `purchaseid` int(11) NOT NULL,
   `productid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `purchase_detail`
@@ -179,6 +205,38 @@ INSERT INTO `user_role` (`role`, `role_name`) VALUES
 (3, 'Cook'),
 (4, 'Customer');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vendor`
+--
+
+CREATE TABLE `vendor` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Dumping data for table `vendor`
+--
+
+INSERT INTO `vendor` (`id`, `name`, `description`) VALUES
+(1, 'Khang\'s Food Store', 'Cửa hàng của Khang đẹp trai'),
+(2, 'Khánh\'s Food Store', 'Cửa hàng của Khánh Chăn cừu');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vendor_owner`
+--
+
+CREATE TABLE `vendor_owner` (
+  `id` int(11) NOT NULL,
+  `vendor_owner_id` int(11) NOT NULL,
+  `vendor_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -188,6 +246,12 @@ INSERT INTO `user_role` (`role`, `role_name`) VALUES
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`categoryid`);
+
+--
+-- Indexes for table `category_product`
+--
+ALTER TABLE `category_product`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product`
@@ -221,6 +285,18 @@ ALTER TABLE `user_role`
   ADD PRIMARY KEY (`role`);
 
 --
+-- Indexes for table `vendor`
+--
+ALTER TABLE `vendor`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vendor_owner`
+--
+ALTER TABLE `vendor_owner`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -229,6 +305,12 @@ ALTER TABLE `user_role`
 --
 ALTER TABLE `category`
   MODIFY `categoryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `category_product`
+--
+ALTER TABLE `category_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -253,6 +335,18 @@ ALTER TABLE `purchase_detail`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `vendor`
+--
+ALTER TABLE `vendor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `vendor_owner`
+--
+ALTER TABLE `vendor_owner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
