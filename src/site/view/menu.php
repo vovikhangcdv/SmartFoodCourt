@@ -24,7 +24,7 @@
             <?php 
                 $counter_product_of_category = 0;
                 for ($i=0;$i<count($menu['products']);$i++){
-                if ($row['id']==$menu['products'][$i]['category_id']) $counter_product_of_category+=1;
+                if ($row['id']==$menu['products'][$i]['categoryid']) $counter_product_of_category+=1;
                 }
             ?>
             <div class="tab-pane fade in <?php if(!$active2) { echo('active'); $active2=1;} ?>" id="<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>">
@@ -36,7 +36,7 @@
                         <?php $counter=0;$i=0?>
                         <?php while($counter < round($counter_product_of_category/2) ): ?>
                             <?php $product=$menu['products'][$i]; ?>
-                            <?php if($product['category_id']==$row['id']): ?>
+                            <?php if($product['categoryid']==$row['id']): ?>
                             <?php $counter+=1 ?>
                         <li>
                             <div class="media">
@@ -46,10 +46,10 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
+                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['productname'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
                                 <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
-                                <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
+                                <br><div style="padding-top:10px"><a href="#" class="mu-readmore-btn" tabindex="-1">Add to cart</a><div>
                             </div>
                             </div>
                         </li>
@@ -64,7 +64,7 @@
                         <ul class="mu-menu-item-nav">
                         <?php while($counter < $counter_product_of_category ): ?>
                             <?php $product=$menu['products'][$i]; ?>
-                            <?php if($product['category_id']==$row['id']): ?>
+                            <?php if($product['categoryid']==$row['id']): ?>
                             <?php $counter+=1 ?>
                         <li>
                             <div class="media">
@@ -74,10 +74,12 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
+                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['productname'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
                                 <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
-                                <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
+                                <br><div style="padding-top:10px"><a href="#" class="mu-readmore-btn" tabindex="1">Add to cart</a><div>
+                            </div>
+                            </div>
                         </li>
                             <?php endif; ?>
                             <?php $i+=1 ?>
@@ -87,7 +89,6 @@
                     </div>
                 </div>
                 </div>
->>>>>>> 28daff7b97284b444e2dcf770509aef12f56d36a
             </div>
             <?php endforeach; ?>
             </div>
@@ -96,8 +97,5 @@
     </div>
     </div>
 </div>
-<form action="<?= PATH_INDEX ?>?c=order&a=add" id="add_to_cart" method="POST">
-  <input type="hiden" id="product_id" name="product_id" value="a" style="display:none">
-</form> 
 </section>
 <!-- End Restaurant Menu -->

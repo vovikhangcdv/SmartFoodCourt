@@ -48,7 +48,6 @@ class Index_Controller extends Base_Controller {
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
     }
-<<<<<<< HEAD
 
     public function historyAction(){
         $this->view->load('header',$data);
@@ -57,7 +56,5 @@ class Index_Controller extends Base_Controller {
         $this->view->load('footer',$data);
     }
 }
-=======
     
 }
->>>>>>> 12873b68bce427a998cff03c72bbe0f9cfcce870
