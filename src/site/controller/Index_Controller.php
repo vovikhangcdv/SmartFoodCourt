@@ -48,5 +48,4 @@ class Index_Controller extends Base_Controller {
         $this->view->load('menu',$data);
         $this->view->load('footer',$data);
     }
-    
 }
