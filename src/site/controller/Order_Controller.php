@@ -18,11 +18,17 @@ class Order_Controller extends Base_Controller
     }
     public function indexAction()
     {
-                $this->config->load('debug_config');
-                $data=array();
+        // $this->config->load('debug_config');
+        global $Database;
+        $this->model->load('Db');
+        $data['vendors'] = get_all_by_tablename($Database,'vendor');
+        for ($i=0; $i < count($data['vendors']); $i++){
+            $data['vendors'][$i]['products'] = get_all_by_column($Database,'product','vendor_id',$data['vendors'][$i]['id']);
+        }
+        // die(var_dump($data['vendors'][0]));
         $this->view->load('header',$data);
-        $this->view->load('slider',$data);
-        $this->view->load('list_vendor',$data);
+        // $this->view->load('slider',$data);
+        $this->view->load('vendor_list',$data);
         $this->view->load('footer',$data);
     }
     public function cartAction()
@@ -98,6 +104,8 @@ class Order_Controller extends Base_Controller
             $data['list_vendor'][$list_vendor[$i]['id']]['products'] = get_products_of_vendor($Database, $list_vendor[$i]['id']);
         }
         $data['vendor_id'] = $_SESSION['vendor']['id'];
+        // var_dump($list_vendor);
+        // die(var_dump($data));
         $this->view->load('header', $data);
         $this->view->load('slider', $data);
         $this->view->load('menu', $data);
