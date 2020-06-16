@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2020 at 10:43 AM
+-- Generation Time: Jun 16, 2020 at 04:33 AM
 -- Server version: 5.7.26-0ubuntu0.18.04.1-log
 -- PHP Version: 7.3.6-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -157,14 +157,18 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `category_id`, `product_name`, `description`, `price`, `photo`, `vendor_id`, `is_ready`) VALUES
-(14, 2, 'Com Suon', '', 40, 'assets/img/product/14.jpg', 1, 1),
-(15, 2, 'Pho', '', 45, 'assets/img/product/15.jpg', 1, 1),
-(16, 3, 'Bun Bo Hue', '', 45, 'assets/img/product/16.jpg', 1, 1),
-(18, 4, 'Mojito', '', 200, 'assets/img/product/18.jpg', 1, 1),
-(20, 2, 'Com Chien', '', 450, 'assets/img/product/20.jpg', 1, 1),
-(21, 1, 'Chao', '', 30, 'assets/img/product/21.jpg', 1, 1),
-(22, 1, 'Bún Riêu', 'Ngon cực kì', 35, 'assets/img/product/22.jpg', 1, 1),
-(23, 4, 'Coca-Cola', '', 80, 'assets/img/product/23.jpg', 1, 1);
+(14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 1, 1),
+(15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 1, 1),
+(16, 3, 'Bun Bo Hue', '', 35000, 'assets/img/product/16.jpg', 1, 1),
+(18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 1, 1),
+(20, 2, 'Com Chien', '', 35000, 'assets/img/product/20.jpg', 1, 1),
+(21, 1, 'Chao', '', 30000, 'assets/img/product/21.jpg', 1, 1),
+(22, 1, 'Bún Riêu', 'Ngon cực kì', 35000, 'assets/img/product/22.jpg', 1, 1),
+(23, 4, 'Coca-Cola', '', 12000, 'assets/img/product/23.jpg', 1, 1),
+(24, 5, 'Bún riêu', 'Quá ngon', 40000, 'assets/img/product/22.jpg', 2, 1),
+(26, 8, 'Coca-cola', 'Nuoc uong', 10000, 'assets/img/product/23.jpg', 2, 1),
+(28, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 2, 1),
+(29, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -267,16 +271,17 @@ INSERT INTO `user_role` (`role`, `role_name`) VALUES
 CREATE TABLE `vendor` (
   `id` int(11) NOT NULL,
   `name` varchar(100) COLLATE utf8_vietnamese_ci NOT NULL,
-  `description` mediumtext COLLATE utf8_vietnamese_ci NOT NULL
+  `description` mediumtext COLLATE utf8_vietnamese_ci NOT NULL,
+  `photo` varchar(200) COLLATE utf8_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
 -- Dumping data for table `vendor`
 --
 
-INSERT INTO `vendor` (`id`, `name`, `description`) VALUES
-(1, 'Khang\'s Food Store', 'Cửa hàng của Khang đẹp trai'),
-(2, 'Khánh\'s Food Store', 'Cửa hàng của Khánh Chăn cừu');
+INSERT INTO `vendor` (`id`, `name`, `description`, `photo`) VALUES
+(1, 'Khang\'s Food Store', 'Cửa hàng của Khang đẹp trai', 'assets/img/vendor/1.jpg'),
+(2, 'Khánh\'s Food Store', 'Cửa hàng của Khánh Chăn cừu', 'assets/img/vendor/2.jpg');
 
 -- --------------------------------------------------------
 
@@ -393,7 +398,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `purchase`
