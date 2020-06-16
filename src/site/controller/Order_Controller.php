@@ -18,16 +18,13 @@ class Order_Controller extends Base_Controller
     }
     public function indexAction()
     {
-        // $this->config->load('debug_config');
         global $Database;
         $this->model->load('Db');
         $data['vendors'] = get_all_by_tablename($Database,'vendor');
         for ($i=0; $i < count($data['vendors']); $i++){
             $data['vendors'][$i]['products'] = get_all_by_column($Database,'product','vendor_id',$data['vendors'][$i]['id']);
         }
-        // die(var_dump($data['vendors'][0]));
-        $this->view->load('header',$data);
-        // $this->view->load('slider',$data);
+        $this->load_header('header',$data);
         $this->view->load('vendor_list',$data);
         $this->view->load('footer',$data);
     }
@@ -35,7 +32,6 @@ class Order_Controller extends Base_Controller
     {
         # Show vendors
         if (!$this->is_set_vendor()) return $this->indexAction();
-        // $this->config->load('debug_config');
         global $Database;
         $this->model->load('Db');
         $this->library->load('Order');
@@ -45,9 +41,7 @@ class Order_Controller extends Base_Controller
         $data['orders'] = $temp_order->get_orders();
         $data['additional_money'] = $temp_order->get_additional_money();
         $data['total'] = $temp_order->get_total();
-        // die(var_dump($data));
-
-        $this->view->load('header',$data);
+        $this->load_header('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('cart',$data);
         $this->view->load('footer',$data);
@@ -75,7 +69,6 @@ class Order_Controller extends Base_Controller
         if (!$this->is_set_vendor()) return $this->indexAction();
         global $Database;
         $this->model->load('Db');
-        // $this->config->load('debug_config');
         if (isset($_REQUEST['product_id'])) {
             $product = get_by_column($Database, 'product', 'product_id', intval($_REQUEST['product_id']));
             if (isset($_REQUEST['quantity'])) $quantity = intval($_REQUEST['quantity']);
@@ -104,8 +97,6 @@ class Order_Controller extends Base_Controller
             $data['list_vendor'][$list_vendor[$i]['id']]['products'] = get_products_of_vendor($Database, $list_vendor[$i]['id']);
         }
         $data['vendor_id'] = $_SESSION['vendor']['id'];
-        // var_dump($list_vendor);
-        // die(var_dump($data));
         $this->view->load('header', $data);
         $this->view->load('slider', $data);
         $this->view->load('menu', $data);

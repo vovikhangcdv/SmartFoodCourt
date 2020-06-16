@@ -10,7 +10,7 @@
           <div class="mu-top-slider-content">
             <span class="mu-slider-small-title">Welcome</span>
             <h2 class="mu-slider-title">BK Smart Food Court</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem accusamus non quidem, deleniti optio.</p>           
+            <p>The food ordering website.</p>           
             <a href="#" class="mu-readmore-btn">READ MORE</a>
           </div>
           <!-- / Top slider content -->
@@ -22,8 +22,8 @@
           <!-- Top slider content -->
           <div class="mu-top-slider-content">
             <span class="mu-slider-small-title">The Real</span>
-            <h2 class="mu-slider-title">GREEN FOODS</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem accusamus non quidem, deleniti optio.</p>           
+            <h2 class="mu-slider-title">BK Smart Food Court</h2>
+            <p>The food ordering website.</p>           
             <a href="#" class="mu-readmore-btn">READ MORE</a>
           </div>
           <!-- / Top slider content -->
@@ -35,8 +35,8 @@
           <!-- Top slider content -->
           <div class="mu-top-slider-content">
             <span class="mu-slider-small-title">Delicious</span>
-            <h2 class="mu-slider-title">SPICY MASALAS</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem accusamus non quidem, deleniti optio.</p>           
+            <h2 class="mu-slider-title">BK Smart Food Court</h2>
+            <p>The food ordering website.</p>           
             <a href="#" class="mu-readmore-btn">READ MORE</a>
           </div>
           <!-- / Top slider content -->
