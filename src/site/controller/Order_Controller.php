@@ -114,17 +114,21 @@ class Order_Controller extends Base_Controller
         $this->view->load('footer', $data);
     }
 
-    public function commit_Action()
+    public function commitAction()
     {
         if (!$this->auth->isLogin()) die(header('Location: index.php?c=login'));
         if ($this->is_empty_card()) return false;
         global $Database;
         $this->model->load('Db');
         $order_id = get_max_order_id($Database);
-        if (!$order_id) die('Error');
+        // die(var_dump($order_id));
+        if ($order_id === false) die('Error');
         $new_order_id = $order_id + 1;
+        // die(var_dump($_SESSION['list_products']));
         foreach ($_SESSION['list_products'] as $product_id => $quantity) {
             if (get_by_column($Database, 'product', 'product_id', intval($product_id))['is_ready'] !== 0) insert_order($Database, $new_order_id, $_SESSION['vendor']['id'], get_user($Database, $_SESSION['username'])['id'], $product_id, $quantity, time());
         }
+        $this->clean_up();
+        $this->indexAction();
     }
 }

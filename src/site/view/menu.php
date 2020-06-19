@@ -41,15 +41,17 @@
                         <li>
                             <div class="media">
                             <div class="media-left">
-                                <a href="#">
+                                <a>
                                 <img class="media-object" src="<?= $product['photo']?>" alt="img">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
-                                <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
-                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
+                                <h4 class="media-heading"><a  onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
+                                <?php if($product['is_ready'] == 1): ?>
                                 <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
+                                <?php else:?>
+                                <br><div style="padding-top:10px" class="mu-readmore-btn" tabindex="-1"><del>Unavailable</del></div>
+                                <?php endif;?>
                             </div>
                             </div>
                         </li>
@@ -69,15 +71,19 @@
                         <li>
                             <div class="media">
                             <div class="media-left">
-                                <a href="#">
+                                <a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')">
                                 <img class="media-object" src="<?= $product['photo']?>" alt="img">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
+                                <h4 class="media-heading"><a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" ><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
                                 <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
+                                <?php if($product['is_ready'] == 1): ?>
                                 <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
+                                <?php else:?>
+                                <br><div style="padding-top:10px" class="mu-readmore-btn" tabindex="-1"><del>Unavailable</del></div>
+                                <?php endif;?>
                         </li>
                             <?php endif; ?>
                             <?php $i+=1 ?>

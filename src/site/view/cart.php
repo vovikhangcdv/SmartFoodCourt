@@ -90,7 +90,7 @@
                         <br>
                         <div style="text-align:center" class="buttons-right">
                             <a href="<?= PATH_INDEX?>?c=order&a=cancel" class="mu-readmore-btn" tabindex="0">Cancel</a>
-                            <a href="#" class="mu-readmore-btn" tabindex="0">Pay</a>
+                            <a href="<?= PATH_INDEX?>?c=order&a=commit" class="mu-readmore-btn" tabindex="0">Pay</a>
                         </div>
                     </div>
                 </div>
