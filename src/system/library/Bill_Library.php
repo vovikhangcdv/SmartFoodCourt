@@ -1,24 +1,28 @@
 <?php if ( ! defined('PATH_SYSTEM')) die ('Bad requested!');
  
-class Order_Library {
+class Bill_Library {
     public $orders = array();
+    public $user;
     public $vendor;
     public $money;
     public $additional_money;
+    public $timestamp_order;
     public $total;
     public function __construct()
     {
         require_once(PATH_APPLICATION . '/model/Db_Model.php');
     }
-    public function generate_order($Database,$order_id,$orders)
+    public function generate_bill($Database,$user,$vendor,$timestamp_order,$list_orders)
     {
-        // $this->vendor = $orders
-        // $id = 1;
-        foreach ($this->orders as $id => $order) {
-            $product = get_by_id($Database,'product',$order['product_id']);
-            $this->orders[$id]['product_id'] = $product['product_id'];
-            $this->orders[$id]['product_name'] = $product['product_name'];
-            $this->orders[$id]['money'] = $product['price']*$order['quantity'];
+        $id = 0;
+        $this->vendor = $vendor;
+        $this->user = $user;
+        $this->timestamp_order = $timestamp_order;
+        foreach ($list_orders as $product_id => $quantity) {
+            $product = get_by_column($Database, 'product', 'product_id', intval($product_id));
+            $this->orders[$id]['product'] = $product;
+            $this->orders[$id]['quantity'] = $quantity;
+            $this->orders[$id]['money'] = $product['price']*$quantity;
             $this->money += $this->orders[$id]['money'];
             $id++;
         }
@@ -26,11 +30,12 @@ class Order_Library {
         $this->total = $this->money + $this->additional_money;
         $this->total = round($this->total,-3);
     }
-    public function generate_temp_order($Database,$vendor,$list_products)
+    public function generate_temp_bill($Database,$user,$vendor,$list_orders)
     {
         $id = 0;
         $this->vendor = $vendor;
-        foreach ($list_products as $product_id => $quantity) {
+        $this->user = $user;
+        foreach ($list_orders as $product_id => $quantity) {
             $product = get_by_column($Database, 'product', 'product_id', intval($product_id));
             $this->orders[$id]['product'] = $product;
             $this->orders[$id]['quantity'] = $quantity;
@@ -53,5 +58,11 @@ class Order_Library {
     }
     public function get_additional_money() {
         return $this->additional_money;
+    }
+    public function get_timestamp_order() {
+        return $this->timestamp_order;
+    }
+    public function get_user() {
+        return $this->user;
     }
 }

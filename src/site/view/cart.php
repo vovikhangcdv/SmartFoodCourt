@@ -28,7 +28,7 @@
                                                 <img align="left" style="padding:3px" alt="Vegetable Soup" width="100" height="100" src="<?= $order['product']['photo'] ?>">
                                             </span>
                                             <div style="padding:2px">
-                                                <span class="cart-product-name"><?= $order['product']['product_name'] ?></span>
+                                                <span class="cart-product-name"><?= htmlentities($order['product']['product_name'], ENT_QUOTES, "UTF-8") ?></span>
                                                 <br>
                                                 <span class="cart-product-unit-price">
                                                     <span class="cart-item-title">Unit Price:</span>
@@ -36,7 +36,7 @@
                                                 </span>
                                                 <br>
                                                 <span class="cart-product-sku">
-                                                    <span class="cart-item-value"><?= $order['product']['description'] ?></span>
+                                                    <span class="cart-item-value"><?= htmlentities($order['product']['description'], ENT_QUOTES, "UTF-8") ?></span>
                                                 </span>
                                             </div>
                                         </td>

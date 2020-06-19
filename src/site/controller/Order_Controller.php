@@ -34,14 +34,14 @@ class Order_Controller extends Base_Controller
         if (!$this->is_set_vendor()) return $this->indexAction();
         global $Database;
         $this->model->load('Db');
-        $this->library->load('Order');
-        $temp_order = new Order_Library();
-        $temp_order->generate_temp_order($Database,$_SESSION['vendor'],$_SESSION['list_products']);
+        $this->library->load('Bill');
+        $temp_order = new Bill_Library();
+        $temp_order->generate_temp_bill($Database,get_user($Database,$this->auth->username),$_SESSION['vendor'],$_SESSION['list_products']);
+        $data['user'] = $temp_order->get_user();
         $data['vendor'] = $temp_order->get_vendor();
         $data['orders'] = $temp_order->get_orders();
         $data['additional_money'] = $temp_order->get_additional_money();
         $data['total'] = $temp_order->get_total();
-        // die(var_dump($data['orders']));
         $this->load_header('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('cart',$data);
