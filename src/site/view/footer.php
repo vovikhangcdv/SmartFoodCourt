@@ -40,8 +40,13 @@
   <script src="assets/js/custom.js"></script> 
   <script>
   function submit_form(id_form,id_input,value_input){
+    try {
       document.getElementById(id_input).value = value_input;
-      document.getElementById(id_form).submit(); // Form submission
+    }
+    catch(err) {
+      console.log("Error! Can not get element by id"); 
+    }
+    document.getElementById(id_form).submit(); // Form submission
   }
   </script>
   </body>

@@ -41,6 +41,7 @@ class Order_Controller extends Base_Controller
         $data['orders'] = $temp_order->get_orders();
         $data['additional_money'] = $temp_order->get_additional_money();
         $data['total'] = $temp_order->get_total();
+        // die(var_dump($data['orders']));
         $this->load_header('header',$data);
         $this->view->load('slider',$data);
         $this->view->load('cart',$data);
@@ -75,6 +76,14 @@ class Order_Controller extends Base_Controller
             else $quantity = 1;
             if ($product and $product['vendor_id'] === $_SESSION['vendor']['id'] and $product['is_ready'] === 1) $_SESSION['list_products'][$product['product_id']] = $quantity;
         }
+        if (isset($_REQUEST['list_products'])) {
+            foreach ($_REQUEST['list_products'] as $stt=>$order){
+                $product = get_by_column($Database, 'product', 'product_id', intval($order['product_id']));
+                if (isset($order['quantity'])) $quantity = intval($order['quantity']);
+                else $quantity = 1;
+                if ($product and $product['vendor_id'] === $_SESSION['vendor']['id'] and $product['is_ready'] === 1) $_SESSION['list_products'][$product['product_id']] = $quantity;
+            }
+        }
         $this->cartAction();
     }
 
@@ -82,6 +91,8 @@ class Order_Controller extends Base_Controller
     {
         if (!$this->is_set_vendor()) return $this->indexAction();
         unset($_SESSION['list_products'][intval($_REQUEST['product_id'])]);
+        $this->cartAction();
+
     }
 
     public function menuAction()
@@ -97,7 +108,7 @@ class Order_Controller extends Base_Controller
             $data['list_vendor'][$list_vendor[$i]['id']]['products'] = get_products_of_vendor($Database, $list_vendor[$i]['id']);
         }
         $data['vendor_id'] = $_SESSION['vendor']['id'];
-        $this->view->load('header', $data);
+        $this->load_header('header',$data);
         $this->view->load('slider', $data);
         $this->view->load('menu', $data);
         $this->view->load('footer', $data);

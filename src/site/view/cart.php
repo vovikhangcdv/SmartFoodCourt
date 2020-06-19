@@ -9,6 +9,7 @@
                             <i class="fa fa-spoon"></i>
                             <span class="mu-title-bar"></span>
                         </div>
+                        <form id='edit_cart' action="<?= PATH_INDEX ?>?c=order&a=add" method="POST">
                         <aside style="padding-left: 250px;">
                             <table style="width:75%" class="j2store-cart-table table table-bordered">
                                 <thead>
@@ -19,7 +20,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($orders as $id=>$order): ?>
+                                    <?php foreach ($orders as $stt=>$order): ?>
+                                    <input type="hidden" name="list_products[<?= $stt?>][product_id]" value="<?= $order['product']['product_id']?>" >
                                     <tr>
                                         <td>
                                             <span class="cart-thumb-image">
@@ -39,9 +41,9 @@
                                             </div>
                                         </td>
                                         <td style="text-align:center; vertical-align:middle;">
-                                            <div class="product-qty"><input style="width:50px;" type="number" name="quantities[1605]" value="1" class="input-mini " min="0" step="1"></div>
+                                            <div class="product-qty"><input style="width:50px;" type="number" name="list_products[<?= $stt?>][quantity]" value="<?= $order['quantity'] ?>" class="input-mini " min="0" step="1"></div>
                                             <br>
-                                            <a class="btn btn-small btn-danger btn-xs j2store-remove remove-icon" href="/joomla/lt-restaurant/index.php/component/j2store/carts/remove?cartitem_id=1605">
+                                            <a class="btn btn-small btn-danger btn-xs j2store-remove remove-icon" href="<?= PATH_INDEX ?>?c=order&a=remove&product_id=<?= $order['product']['product_id']?>">
                                                 <i class="fa fa-trash-o"></i>
                                             </a>
                                         </td>
@@ -52,12 +54,12 @@
                                 </tbody>
                             </table>
                         </aside>
+                        </form>
                         <br>
                         <div style="text-align: center;" class="j2store-cart-buttons">
-                            <div class="buttons-left">
+                            <a class="buttons-left">
                                 <a href="<?= PATH_INDEX ?>?c=order&a=menu" class="mu-readmore-btn" tabindex="0">Continue Choose food</a>
-
-                                <a href="#" class="mu-readmore-btn" tabindex="0">Update</a>
+                                <a onclick="submit_form('edit_cart','','')" class="mu-readmore-btn" tabindex="0">Update</a>
                             </div>
                             <div class="buttons-right">
                             </div>
