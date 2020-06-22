@@ -11,7 +11,7 @@
           <!-- Top slider content -->
           <div class="mu-top-slider-content"><br><br>
             <h2 class="mu-slider-title"><?= $vendor['name'] ?></h2>
-            <p>Sell Hotdog here</p>
+            <p>"<?= $vendor['description'] ?>"</p>
             <a href="<?= PATH_INDEX ?>?c=order&a=set_vendor&vendor_id=<?= $vendor['id'] ?>" class="mu-readmore-btn">View all food</a>
             <section id="mu-chef">
               <div class="container">
@@ -34,7 +34,6 @@
                                 <img style="width:275px;height:265px" src="<?= $product['photo']?>">
                               </a>
                               </figure>
-
                             </div>
                           </li>
                         <?php endforeach;?>
