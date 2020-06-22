@@ -11,7 +11,7 @@
             <span class="mu-slider-small-title">Welcome</span>
             <h2 class="mu-slider-title">BK Smart Food Court</h2>
             <p>The food ordering website.</p>           
-            <a href="#" class="mu-readmore-btn">READ MORE</a>
+            <a href="<?= PATH_INDEX ?>?c=order" class="mu-readmore-btn">Order Now</a>
           </div>
           <!-- / Top slider content -->
         </div>

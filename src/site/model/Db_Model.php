@@ -14,7 +14,7 @@ function delete_user($Database, $username) {
     return $Database->getError();
 }
 function get_user($Database,$username){
-    $statement = "SELECT * from user where username=?";
+    $statement = "SELECT * from user JOIN user_role where user.role = user_role.role and user.username=?";
     $result = $Database->query($statement, "s", array($username));
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -33,7 +33,7 @@ function get_all_student($Database) {
     } else return false;
 }
 function get_user_by_id($Database,$id){
-    $statement = "SELECT * from user where id=?";
+    $statement = "SELECT * from user JOIN user_role where user.role = user_role.role and id=?";
     $result = $Database->query($statement, "i", array($id));
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -185,4 +185,13 @@ function get_order_by_order_id($Database,$order_id){
         return $output;
     } else return false;
 }
+function get_all_user_join_role($Database) {
+    $result = $Database->query("SELECT * FROM user JOIN user_role where user.role = user_role.role", '', array());
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $output[] = $row;
+            }
+            return $output;
+        } else return false;
+    }
 ?>

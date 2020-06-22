@@ -4,23 +4,22 @@ class Update_Controller extends Auth_Controller
 {
     public function indexAction(){
         global $Database;
+        // $this->config->load('debug_config');
         $this->model->load('Db');
         $this->model->load('checker');
         $data['return'] = true;
         $data['title'] = "Update";
-        if (isset($_POST['username']) and get_user($Database,$_POST['username'])!= false and ($this->auth->isTeacher() or ($this->auth->isAdmin()))){
+        if (isset($_POST['username']) and ($this->auth->isAdmin())){
             $username = $_POST['username'];
-            if ($_POST['new_username'] == '') $new_username = $username;
-            else $new_username = $_POST['new_username'];
         }
         else {
             $username = $this->auth->username;
-            $new_username = $username;
         }
         $data['info'] = get_user($Database,$username);
-        if (isset($_POST['password']) and isset($new_username) and isset($_POST['repeat_password']) and isset($_POST['email']) and isset($_POST['sdt']) and isset($_POST['fullname'])){
+        if (isset($_POST['password']) and isset($_POST['repeat_password']) and isset($_POST['email']) and isset($_POST['sdt']) and isset($_POST['fullname'])){
             if (!isset($_POST['token']) or ($_POST['token']!==$_SESSION['token'])) die('Invalid token!');
             $data['return'] = false;
+            // Skip update password
             if ($_POST['password'] !== $_POST['repeat_password']) {
                 $data['message'] = "Repeat password not match";
             }
@@ -34,14 +33,22 @@ class Update_Controller extends Auth_Controller
                 $data['messgage'] = "Invalid full name";
             }
             else {
-                $data['message'] = $this->auth->update($username,$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt'],$new_username);
+                $data['message'] = $this->auth->update($username,$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt']);
                 $data['return'] = ($data['message']=="Update successfully!");
-                $data['info'] = get_user($Database,$new_username);
+                $data['info'] = get_user($Database,$username);
             }
         }
-        $this->load_header('header',$data);
-        $this->view->load('update',$data);
-        $this->load_footer('footer',$data);
+        if ($this->auth->isAdmin()) {
+            $this->load_header('header_Admin',$data);
+            $this->view->load('update_Admin',$data);
+            $this->load_footer('footer_Admin',$data);
+        }
+        else {
+            $this->load_header('header',$data);
+            $this->view->load('slider',$data);
+            $this->view->load('update_User',$data);
+            $this->load_footer('footer',$data); 
+        }
     }
 
 

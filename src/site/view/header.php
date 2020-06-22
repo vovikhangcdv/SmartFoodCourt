@@ -66,22 +66,25 @@
             <span class="icon-bar"></span>
           </button>
           <!-- LOGO -->                                                        
-          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo img"></a> 
+          <a class="navbar-brand" href="<?= PATH_INDEX ?>"><img src="assets/img/logo.png" alt="Logo img"></a> 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
             <li><a href="<?= PATH_INDEX ?>">HOME</a></li>
-            <li><a href="<?= PATH_INDEX ?>?c=order">VENDORS</a></li>                      
-            <li><a href="<?= PATH_INDEX ?>">ABOUT US</a></li>                    
-            <li><a href="<?= PATH_INDEX ?>">RESERVATION</a></li>                       
-            <li><a href="<?= PATH_INDEX ?>">GALLERY</a></li>
-            <li><a href="<?= PATH_INDEX ?>">OUR TEAM</a></li>
-            <li><a href="<?= PATH_INDEX ?>">BLOG</a></li> 
-            <li><a href="<?= PATH_INDEX ?>">CONTACT</a></li>
+            <li><a href="<?= PATH_INDEX ?>?c=order">VENDORS</a></li>
+            <?php if ($_SESSION['role'] === 0): ?>
+            <li><a href="<?= PATH_INDEX ?>?c=management">MANAGEMENT</a></li>
+            <?php endif;?>
+            <li><a href="<?= PATH_INDEX ?>?c=load_page&page=about_us">ABOUT US</a></li>
+            <li><a href="<?= PATH_INDEX ?>?c=load_page&page=our_team">OUR TEAM</a></li>
+            <li><a href="<?= PATH_INDEX ?>?c=load_page&page=contact">CONTACT</a></li>
             <?php if (isset($_SESSION['role'])): ?>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html"><?= htmlspecialchars($header['user']['fullname'], ENT_QUOTES, 'UTF-8'); ?><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
+                <li><a href="<?= PATH_INDEX ?>?c=info">Profile</a></li>
+                <li><a href="<?= PATH_INDEX ?>?c=bill ">Order History</a></li>
+                <li><a href="<?= PATH_INDEX ?>?c=update">Account</a></li>
                 <li><a href="<?= PATH_INDEX ?>?c=logout">Logout</a></li>                                            
               </ul>
             </li>

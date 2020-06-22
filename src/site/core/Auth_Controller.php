@@ -6,4 +6,8 @@ class Auth_Controller extends Base_Controller {
             die(header('Location: /index.php?c=login'));
         }
     }
+    public function authenticate_by_role($role){
+        if ($_SESSION['role'] === $role) return true;
+        else die(header('Location: /index.php?c=login'));
+    }
 }

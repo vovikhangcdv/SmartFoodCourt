@@ -32,12 +32,6 @@ class Auth_Loader {
     public function isAdmin() {
         return $this->role === 0;
     }
-    public function isTeacher() {
-        return $this->role === 1;
-    }
-    public function isStudent() {
-        return $this->role === 2;
-    }
     /**
      * @function: login
      *
@@ -90,26 +84,7 @@ class Auth_Loader {
         }
     }
 
-    public function update($username, $fullname, $password, $email, $sdt, $new_username) {
-        if ($username !== $new_username){
-            if (!$this->checkvalid($new_username, $password)) return 'Username or password must be [a-zA-Z0-9-_.@] and max length is 32';
-            $statement = "SELECT * FROM user WHERE username=?";
-            $result = $this->db->query($statement, "s", array($new_username));
-            if ($result->num_rows > 0) {
-                return 'Username existed!';
-            }
-            $statement = "SELECT * FROM user WHERE username=?";
-            $result = $this->db->query($statement, "s", array($username));
-            $row = $result->fetch_assoc();
-            if ($row['role'] !==2 and $_SESSION['username']!==$username ){
-                return 'You don not have permission.';
-            }
-        }
-        if ($username == $this->username){
-            $this->username = $new_username;
-            $_SESSION['username'] = $this->username;
-        }
-        if (!$this->checkvalid($username, $password)) return 'Username or password must be [a-zA-Z0-9-_.@] and max length is 32';
+    public function update($username, $fullname, $password, $email, $sdt) {
         $statement = "SELECT * FROM user WHERE username=?";
         $result = $this->db->query($statement, "s", array($username));
         $row = $result->fetch_assoc();
@@ -117,11 +92,17 @@ class Auth_Loader {
             return 'User not exist!';
         } 
         else {
-            $statement = "UPDATE user SET username=?,fullname=?,password=?,email=?,sdt=? where username=?";
-            $this->db->query($statement, "ssssss", array($new_username, $fullname, password_hash($password, PASSWORD_BCRYPT), $email, $sdt, $username));
+            if ($password === ''){
+                $statement = "UPDATE user SET fullname=?,email=?,sdt=? where username=?";
+                $this->db->query($statement, "ssss", array($fullname, $email, $sdt, $username));
+            }
+            else {
+                if (!$this->checkvalid($username, $password)) return 'Username or password must be [a-zA-Z0-9-_.@] and max length is 32';
+                $statement = "UPDATE user SET fullname=?,password=?,email=?,sdt=? where username=?";
+                $this->db->query($statement, "sssss", array($fullname, password_hash($password, PASSWORD_BCRYPT), $email, $sdt, $username));
+            }
             if ($this->db->getError()) return 'Update failed!';
             return 'Update successfully!';
         }
     }
-    // public function edit($username,$email,$sdt)
 }

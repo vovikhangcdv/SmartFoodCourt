@@ -13,11 +13,18 @@ class Info_Controller extends Auth_Controller
             $data['info'] = get_user_by_id($Database,intval($_GET['id']));
         }
         else {
-            die(header('Location: index.php'));
+            $data['info'] = $data['current_user'];
         }
-        $this->load_header('header',$data);
-        $this->view->load('info',$data);
-        $this->load_footer('footer',$data);
+        if ($this->auth->isAdmin()) {
+            $this->load_header('header_Admin',$data);
+            $this->view->load('info_Admin',$data);
+            $this->load_footer('footer_Admin',$data);
+        }
+        else {
+            $this->load_header('header',$data);
+            $this->view->load('slider',$data);
+            $this->view->load('info_User',$data);
+            $this->load_footer('footer',$data);        }
     }
 
 

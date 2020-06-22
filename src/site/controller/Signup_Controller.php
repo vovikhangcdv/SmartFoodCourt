@@ -27,7 +27,7 @@ class Signup_Controller extends Base_Controller
                 }
                 else $data['message'] = $this->auth->signup($_POST['username'],$_POST['fullname'],$_POST['password'],$_POST['email'],$_POST['sdt'],4);
                 $data['return'] = ($data['message'] == "Sign up successfully!");
-                $data['message'] = $data['message']." <a href='../../index.php'> Login</a>";
+                $data['message'] = $data['message']." <a href='".PATH_INDEX."?c=login'> Login</a>";
             }
         }
         if ($this->auth->isAdmin()){
