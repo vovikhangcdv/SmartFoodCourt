@@ -194,4 +194,14 @@ function get_all_user_join_role($Database) {
             return $output;
         } else return false;
     }
+function get_vendor_id_by_user_id($Database,$user_id){
+    $statement = "SELECT vendor_id from vendor_owner where user_id=?";
+    $result = $Database->query($statement, "i", array(intval($user_id)));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
 ?>

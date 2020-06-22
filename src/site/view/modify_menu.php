@@ -1,5 +1,5 @@
 <section id="mu-about-us">
-    <div class="container">
+    <div class="container float-right" >
         <div class="row">
             <div class="col-md-12">
                 <div class="mu-about-us-area">
@@ -26,6 +26,9 @@
                                 text-align: center;
                             }
 
+                            thead{
+                                background-color: #c1a35f;
+                            }
                             .switch {
                                 position: relative;
                                 display: inline-block;
@@ -64,11 +67,11 @@
                             }
 
                             input:checked+.slider {
-                                background-color: rgb(204, 185, 11);
+                                background-color: #c1a35f;
                             }
 
                             input:focus+.slider {
-                                box-shadow: 0 0 1px rgb(204, 185, 11);
+                                box-shadow: 0 0 1px #c1a35f;
                             }
 
                             input:checked+.slider:before {
@@ -93,7 +96,7 @@
                     </div>
 
                     <table class="table table-bordered ">
-                        <thead style="background-color:rgb(204, 185, 11);">
+                        <thead style="background-color:#c1a35f;">
                             <tr>
                                 <th class="w-10" style=" vertical-align: middle;font-size: 20px;color:white">ID</th>
                                 <th class="w-25" style=" vertical-align: middle;font-size: 20px;color:white">Image</th>
@@ -143,25 +146,15 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td style="vertical-align: middle;"></td>
-                                <td style="vertical-align: middle;"></td>
-                                <td style="vertical-align: middle;"></td>
-                                <td style="vertical-align: middle;"></td>
-                                <td style="vertical-align: middle;"><button type="button" data-toggle="modal" data-target="#addFood" style="size: 200%;background-color:rgb(204, 185, 11);color:white">Add Food</button></td>
-                            </tr>
                         </tbody>
                     </table>
 
                 </div>
             </div>
         </div>
+    <button data-toggle="modal" data-target="#addFood" style="margin:5px;float:right;background-color:#c1a35f;border:#c1a35f" class="btn-lg btn-success" type="submit">Add food</button>
+    <button style="float:right;background-color:#c1a35f;border:#c1a35f;margin:5px;" data-toggle="modal" data-target="#addCategory" class="btn-lg btn-success" type="submit">Add Category</button>
     </div>
-    
-    <button style="position: absolute; right: 13%;background-color:rgb(204, 185, 11);color:white"  type="button" data-toggle="modal" data-target="#addCategory">Add Category</button>
 
 
 
@@ -176,7 +169,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold" style="color:rgb(204, 185, 11) ;">ADD FOOD</h4>
+                    <h4 class="modal-title w-100 font-weight-bold" style="color:#c1a35f ;">ADD FOOD</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -217,7 +210,7 @@
                 </div>
                 <button class="btn btn-default">Browse</button>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-default" style="background-color:rgb(204, 185, 11) ;">ADD</button>
+                    <button class="btn btn-default" style="background-color:#c1a35f ;">ADD</button>
                 </div>
             </div>
         </div>
@@ -227,7 +220,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold" style="color:rgb(204, 185, 11) ;">ADD CATEGORY</h4>
+                    <h4 class="modal-title w-100 font-weight-bold" style="color:#c1a35f ;">ADD CATEGORY</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -237,7 +230,7 @@
                     <input type="text" />
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-default" style="background-color:rgb(204, 185, 11) ;">ADD</button>
+                    <button class="btn btn-default" style="background-color:#c1a35f ;">ADD</button>
                 </div>
             </div>
         </div>
