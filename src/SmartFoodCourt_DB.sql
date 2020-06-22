@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2020 at 04:33 AM
+-- Generation Time: Jun 22, 2020 at 10:26 PM
 -- Server version: 5.7.26-0ubuntu0.18.04.1-log
 -- PHP Version: 7.3.6-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -135,6 +135,28 @@ CREATE TABLE `orders` (
   `timestamp_finish` int(11) NOT NULL DEFAULT '-1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `order_id`, `vendor_id`, `customer_id`, `product_id`, `quantity`, `timestamp_order`, `timestamp_finish`) VALUES
+(1, 1, 1, 9, 14, 2, 1592576667, -1),
+(2, 1, 1, 9, 22, 1, 1592576667, -1),
+(3, 2, 1, 9, 14, 2, 1592576859, -1),
+(4, 2, 1, 9, 22, 1, 1592576859, -1),
+(5, 3, 1, 9, 22, 1, 1592577205, -1),
+(6, 3, 1, 9, 23, 1, 1592577205, -1),
+(7, 4, 1, 9, 22, 1, 1592593347, -1),
+(8, 4, 1, 9, 15, 2, 1592593347, -1),
+(9, 4, 1, 9, 20, 1, 1592593347, -1),
+(10, 5, 2, 9, 29, 1, 1592595545, -1),
+(11, 6, 1, 9, 22, 2, 1592635421, -1),
+(12, 6, 1, 9, 23, 1, 1592635421, -1),
+(13, 6, 1, 9, 20, 1, 1592635421, -1),
+(14, 7, 1, 13, 21, 1, 1592852656, -1),
+(15, 7, 1, 13, 20, 1, 1592852656, -1),
+(16, 7, 1, 13, 23, 1, 1592852656, -1);
+
 -- --------------------------------------------------------
 
 --
@@ -157,7 +179,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `category_id`, `product_name`, `description`, `price`, `photo`, `vendor_id`, `is_ready`) VALUES
-(14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 1, 1),
+(14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 1, 0),
 (15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 1, 1),
 (16, 3, 'Bun Bo Hue', '', 35000, 'assets/img/product/16.jpg', 1, 1),
 (18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 1, 1),
@@ -236,9 +258,13 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `fullname`, `password`, `email`, `sdt`, `role`) VALUES
 (9, 'admin', 'Admin', '$2y$10$CWK209WNP7Jv6QogS4JTZuh9afycGiHogHd8LnJq0P0nhYs4V77iW', 'admin@gmail.com', '1234123', 0),
-(10, 'khang', 'Khang', '$2y$10$pZSacUocfjC6r07yQKuSFeb0MoDxZ.YTe6zRXBzZNHI/m9069N.cG', 'khang@gmail.com', '123456', 2),
+(10, 'khang', 'Võ Vĩ Khang', '$2y$10$M4WhbDw2dxKp.V7fzvfazOjM45iw6EypMd3QPWULTsyOAIrXnj4dy', 'khang@gmail.com', '123456', 2),
 (11, 'testerxx', 'Tester BKSFC', '$2y$10$.v6Qdl/VsgSIkT9CtbIapezMSBo8ERINl3m81VDvq7ykSTRvF6TCy', 'tester@gmail.com', '0967823221', 4),
-(12, 'tester1', 'Test1', '$2y$10$GwiNyuukbjVmfKfAExt5u.aHbUAMoA4ATFOVDZVYmTJEosdZC/pde', 'test1@gmail.com', '092322211', 4);
+(12, 'tester1', 'Test1', '$2y$10$GwiNyuukbjVmfKfAExt5u.aHbUAMoA4ATFOVDZVYmTJEosdZC/pde', 'test1@gmail.com', '092322211', 4),
+(13, 'vovikhangcdv', 'Võ Vĩ Khang', '$2y$10$OaRLzHihKn3MguOy1udzFe9EOjKOmZ2cqyN6HrFSRp2wZk1S8nD7e', 'khang.vo2000@hcmut.edu.vn', '0967830088', 4),
+(15, 'cookvendor1', 'Cook Vendor 1', '$2y$10$YpCFdsPOXyjFtJpzdnmNVuzPVeRFoULUnk405S7ZEPFZdjvKENopy', 'khang.vo2000@hcmut.edu.vn', '09123422322', 3),
+(16, 'vendorowner1', 'Vendor Owner 1', '$2y$10$gDJx1h2wzyhR9UcUPaAFpeiWkNTP6VWia9ChIWICACtpNOKwW4fK.', 'asdfadfadfadsf@gmail.com', '0923242123', 2),
+(17, 'vendorowner2', 'Vendor Owner 2', '$2y$10$chwrJY0auUZOIboCnIY9QuXgWztInsy3OzjvP5/mksIPXsrVxqfrK', 'adsfad@gmail.com', '123456789', 2);
 
 -- --------------------------------------------------------
 
@@ -291,9 +317,18 @@ INSERT INTO `vendor` (`id`, `name`, `description`, `photo`) VALUES
 
 CREATE TABLE `vendor_owner` (
   `id` int(11) NOT NULL,
-  `vendor_owner_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `vendor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Dumping data for table `vendor_owner`
+--
+
+INSERT INTO `vendor_owner` (`id`, `user_id`, `vendor_id`) VALUES
+(2, 15, 1),
+(3, 16, 1),
+(4, 17, 2);
 
 --
 -- Indexes for dumped tables
@@ -392,7 +427,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -416,7 +451,7 @@ ALTER TABLE `purchase_detail`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `vendor`
@@ -428,7 +463,7 @@ ALTER TABLE `vendor`
 -- AUTO_INCREMENT for table `vendor_owner`
 --
 ALTER TABLE `vendor_owner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
