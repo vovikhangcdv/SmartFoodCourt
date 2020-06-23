@@ -3,12 +3,12 @@
     <div class="card-body">
     <div id="content">
 
-    <form class="form-horizontal" action="../index.php?c=challenge&a=add_challenge" runat="server" method="POST" enctype="multipart/form-data" >
+    <form class="form-horizontal" action="<?= PATH_INDEX?>?c=vendor&a=add_vendor" runat="server" method="POST" enctype="multipart/form-data" >
 
     <div class="form-group row">
-    <label class="col-md-3 col-form-label" for="text-input"><h3>Title</h3></label>
+    <label class="col-md-3 col-form-label" for="text-input"><h3>Vendor Name</h3></label>
     <div class="col-md-9">
-    <input class="form-control" id="text-input" type="text" name="title" placeholder="Text">
+    <input class="form-control" id="text-input" type="text" name="name" placeholder="Text">
     </div>
     </div>
 
