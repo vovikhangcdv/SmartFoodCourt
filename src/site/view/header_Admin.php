@@ -67,44 +67,25 @@
         </div>
         <ul class="c-sidebar-nav">
             <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>">
+                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=management">
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                     </svg> Dashboard</a>
             </li>
-            <li class="c-sidebar-nav-title">Tools</li>
+            <li class="c-sidebar-nav-title">Action</li>
             <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=assignment">
+                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=vendor">
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
-                    </svg> Assignment</a>
+                    </svg> Vendor</a>
             </li>
             <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=challenge">
+                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=signup">
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
-                    </svg> Challenge</a>
+                    </svg> Add User</a>
             </li>
 
-            <!-- <li class="c-sidebar-nav-divider"></li>
-            <li class="c-sidebar-nav-title">Extras</li> -->
-            <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=message">
-                    <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
-                    </svg> Message </a>
-            </li>
-            <?php if (isset($_SESSION['role']) and $_SESSION['role'] === 0): ?>
-                <li class="c-sidebar-nav-divider"></li>
-                <li class="c-sidebar-nav-title">Admin</li>
-                <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=signup">
-                        <svg class="c-sidebar-nav-icon">
-                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
-                        </svg> Add User </a>
-                </li>
-              <?php
-endif; ?>
 
         </ul>
         <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>

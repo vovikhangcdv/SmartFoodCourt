@@ -80,12 +80,9 @@
             <li><a href="<?= PATH_INDEX ?>?c=load_page&page=contact">CONTACT</a></li>
             <?php if (isset($_SESSION['role']) and $_SESSION['role'] === 2): ?>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html"><?= htmlspecialchars($header['user']['fullname'], ENT_QUOTES, 'UTF-8'); ?><span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">My Vendor<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
-                <li><a href="<?= PATH_INDEX ?>?c=info">Profile</a></li>
-                <li><a href="<?= PATH_INDEX ?>?c=bill ">Order History</a></li>
-                <li><a href="<?= PATH_INDEX ?>?c=update">Account</a></li>
-                <li><a href="<?= PATH_INDEX ?>?c=logout">Logout</a></li>                                            
+                <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>                                          
               </ul>
             </li>
             <?php endif; ?>
