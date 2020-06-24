@@ -44,7 +44,6 @@ function get_user_by_id($Database,$id){
 }
 function delete_by_id($Database,$table,$id){
     $statement = "DELETE FROM ${table} where id=?";
-    echo("DELETE FROM ${table} where id=$id");
     $result = $Database->query($statement, 'i', array($id));
     return $Database->getError();
 }
@@ -210,6 +209,16 @@ function insert_vendor($Database,$name,$description,$photo){
     $Database->query($statement, "sss", array($name,$description,$photo));
     return $Database->getError();
 }
+function insert_category($Database,$catname,$vendor_id){
+    $statement = "INSERT INTO category_product (catname,vendor_id) values (?,?)";
+    $Database->query($statement, "si", array($catname,$vendor_id));
+    return $Database->getError();
+}
+function insert_product($Database,$product_name,$category_id,$description,$price,$vendor_id,$photo){
+    $statement = "INSERT INTO product (category_id,product_name,description,price,photo,vendor_id) values (?,?,?,?,?,?)";
+    $Database->query($statement, "issisi", array($category_id,$product_name,$description,$price,$photo,$vendor_id));
+    return $Database->getError();
+}
 function get_next_id($Database,$table,$database_name='SmartFoodCourt_DB'){
     $statement = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ?";
     $result = $Database->query($statement, "ss", array($database_name,$table));
@@ -219,5 +228,15 @@ function get_next_id($Database,$table,$database_name='SmartFoodCourt_DB'){
         }
         return $output[0];
     } else return false;
+}
+function delete_by_column($Database,$table,$column,$value){
+    $statement = "DELETE FROM ${table} where ${column}=?";
+    $result = $Database->query($statement, 's', array($value));
+    return $Database->getError();
+}
+function update_by_column($Database,$table, $column, $value,$condition_column, $condition_value){
+    $statement = "UPDATE {$table} SET {$column} = ? where {$condition_column} = ?";
+    $Database->query($statement, "ss", array($value,$condition_value));
+    return $Database->getError();
 }
 ?>

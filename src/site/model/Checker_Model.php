@@ -14,4 +14,7 @@ function check_assignment_title($title){
 function check_valid_filename($filename,$regex='/^([-\.\w]+)$/'){
     if (!(preg_match($regex, $filename) > 0)) return false;
 }
+function check_valid_product_name($name){
+    return (strlen($name) > 3 and strlen($name) < 20);
+}
 ?>

@@ -2,16 +2,13 @@
 class Base_Controller extends Controller {
     public function __construct() {
         parent::__construct();
+        $this->model->load('Tool');
     }
     public function load_header($header_name,$data) {
         // Load nội dung footer
         global $Database;
         $this->model->load('Db');
         $data['header']['user'] = get_user($Database,$this->auth->username);
-        if ($this->auth->isVendorOwner() or $this->auth->isCook()){
-            $data['header']['vendor'] = get_user($Database,$this->auth->username);
-        }
-        $data['header']['vendor'] = get_user($Database,$this->auth->username);
         if ($this->auth->isLogin()){
             $unchecked_message = get_unchecked_message($Database,get_user($Database,$this->auth->username)['id']);
             foreach ($unchecked_message as $message){
