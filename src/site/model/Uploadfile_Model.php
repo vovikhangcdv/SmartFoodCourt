@@ -8,11 +8,6 @@ function checkvalidfileupload($file, $array_Allow_extention,$regex='/^([-\.\w]+)
         if ($file["size"] > 1000000) {
             return false;
         }
-        //
-        if($file['type'] != "image/gif") {    
-            echo "Sorry, we only allow uploading GIF images";    
-            return false;
-        }
         // Allow certain file formats
         if (!in_array($imageFileType, $array_Allow_extention)) {
             return false;

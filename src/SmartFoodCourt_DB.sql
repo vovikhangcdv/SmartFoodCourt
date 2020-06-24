@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2020 at 04:33 AM
+-- Generation Time: Jun 24, 2020 at 11:37 AM
 -- Server version: 5.7.26-0ubuntu0.18.04.1-log
 -- PHP Version: 7.3.6-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -60,14 +60,13 @@ CREATE TABLE `category_product` (
 --
 
 INSERT INTO `category_product` (`id`, `catname`, `vendor_id`) VALUES
-(1, 'BREAKFAST', 1),
-(2, 'LUNCH', 1),
-(3, 'DINNER', 1),
-(4, 'DRINK', 1),
-(5, 'BREAKFAST', 2),
-(6, 'LUNCH', 2),
-(7, 'DINNER', 2),
-(8, 'DESSERT', 2);
+(2, 'LUNCH', 20),
+(3, 'DINNER', 20),
+(4, 'DRINK', 20),
+(5, 'BREAKFAST', 21),
+(6, 'LUNCH', 21),
+(7, 'DINNER', 21),
+(8, 'DESSERT', 21);
 
 -- --------------------------------------------------------
 
@@ -135,6 +134,15 @@ CREATE TABLE `orders` (
   `timestamp_finish` int(11) NOT NULL DEFAULT '-1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `order_id`, `vendor_id`, `customer_id`, `product_id`, `quantity`, `timestamp_order`, `timestamp_finish`) VALUES
+(17, 8, 20, 9, 23, 1, 1592908949, -1),
+(18, 8, 20, 9, 15, 1, 1592908949, -1),
+(19, 9, 20, 18, 22, 1, 1592968402, -1);
+
 -- --------------------------------------------------------
 
 --
@@ -157,18 +165,19 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `category_id`, `product_name`, `description`, `price`, `photo`, `vendor_id`, `is_ready`) VALUES
-(14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 1, 1),
-(15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 1, 1),
-(16, 3, 'Bun Bo Hue', '', 35000, 'assets/img/product/16.jpg', 1, 1),
-(18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 1, 1),
-(20, 2, 'Com Chien', '', 35000, 'assets/img/product/20.jpg', 1, 1),
-(21, 1, 'Chao', '', 30000, 'assets/img/product/21.jpg', 1, 1),
-(22, 1, 'Bún Riêu', 'Ngon cực kì', 35000, 'assets/img/product/22.jpg', 1, 1),
-(23, 4, 'Coca-Cola', '', 12000, 'assets/img/product/23.jpg', 1, 1),
-(24, 5, 'Bún riêu', 'Quá ngon', 40000, 'assets/img/product/22.jpg', 2, 1),
-(26, 8, 'Coca-cola', 'Nuoc uong', 10000, 'assets/img/product/23.jpg', 2, 1),
-(28, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 2, 1),
-(29, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 2, 1);
+(14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 20, 1),
+(15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 20, 0),
+(16, 3, 'Bun Bo Hue', '', 35000, 'assets/img/product/16.jpg', 20, 1),
+(18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 20, 0),
+(20, 2, 'Com Chien', '', 35000, 'assets/img/product/20.jpg', 20, 1),
+(21, 1, 'Chao', '', 30000, 'assets/img/product/21.jpg', 20, 1),
+(22, 1, 'Bún Riêu', 'Ngon cực kì', 35000, 'assets/img/product/22.jpg', 20, 1),
+(23, 4, 'Coca-Cola', '', 12000, 'assets/img/product/23.jpg', 20, 1),
+(24, 5, 'Bún riêu', 'Quá ngon', 40000, 'assets/img/product/22.jpg', 21, 1),
+(26, 8, 'Coca-cola', 'Nuoc uong', 10000, 'assets/img/product/23.jpg', 21, 1),
+(28, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 21, 1),
+(29, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 21, 1),
+(33, 2, 'Cháo gà', 'Chào gà ăn sáng nhé', 32000, 'assets/img/product/33.jpg', 20, 0);
 
 -- --------------------------------------------------------
 
@@ -236,9 +245,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `fullname`, `password`, `email`, `sdt`, `role`) VALUES
 (9, 'admin', 'Admin', '$2y$10$CWK209WNP7Jv6QogS4JTZuh9afycGiHogHd8LnJq0P0nhYs4V77iW', 'admin@gmail.com', '1234123', 0),
-(10, 'khang', 'Khang', '$2y$10$pZSacUocfjC6r07yQKuSFeb0MoDxZ.YTe6zRXBzZNHI/m9069N.cG', 'khang@gmail.com', '123456', 2),
-(11, 'testerxx', 'Tester BKSFC', '$2y$10$.v6Qdl/VsgSIkT9CtbIapezMSBo8ERINl3m81VDvq7ykSTRvF6TCy', 'tester@gmail.com', '0967823221', 4),
-(12, 'tester1', 'Test1', '$2y$10$GwiNyuukbjVmfKfAExt5u.aHbUAMoA4ATFOVDZVYmTJEosdZC/pde', 'test1@gmail.com', '092322211', 4);
+(18, 'khang', 'Võ Vĩ Khang', '$2y$10$tlfFkV.ZNBznUxkANogCkOzJXdspLI2rJOfL.4jpjM.BBhF8k97AG', 'khang.vo2000@hcmut.edu.vn', '0967830088', 2);
 
 -- --------------------------------------------------------
 
@@ -280,8 +287,8 @@ CREATE TABLE `vendor` (
 --
 
 INSERT INTO `vendor` (`id`, `name`, `description`, `photo`) VALUES
-(1, 'Khang\'s Food Store', 'Cửa hàng của Khang đẹp trai', 'assets/img/vendor/1.jpg'),
-(2, 'Khánh\'s Food Store', 'Cửa hàng của Khánh Chăn cừu', 'assets/img/vendor/2.jpg');
+(20, 'Khang\'s Food', 'Quán ăn của Khang', 'assets/img/vendor/20.png'),
+(21, 'Khánh\'s Cắt Cổ', 'Quán này đồ ăn dở ẹc', 'assets/img/vendor/21.png');
 
 -- --------------------------------------------------------
 
@@ -291,9 +298,19 @@ INSERT INTO `vendor` (`id`, `name`, `description`, `photo`) VALUES
 
 CREATE TABLE `vendor_owner` (
   `id` int(11) NOT NULL,
-  `vendor_owner_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `vendor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Dumping data for table `vendor_owner`
+--
+
+INSERT INTO `vendor_owner` (`id`, `user_id`, `vendor_id`) VALUES
+(2, 15, 1),
+(3, 16, 1),
+(4, 17, 2),
+(5, 18, 20);
 
 --
 -- Indexes for dumped tables
@@ -380,7 +397,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `category_product`
 --
 ALTER TABLE `category_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -392,13 +409,13 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `purchase`
@@ -416,19 +433,19 @@ ALTER TABLE `purchase_detail`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `vendor`
 --
 ALTER TABLE `vendor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `vendor_owner`
 --
 ALTER TABLE `vendor_owner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

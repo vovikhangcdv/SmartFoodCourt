@@ -32,6 +32,18 @@ class Auth_Loader {
     public function isAdmin() {
         return $this->role === 0;
     }
+    public function isManager() {
+        return $this->role === 1;
+    }
+    public function isVendorOwner() {
+        return $this->role === 2;
+    }
+    public function isCook() {
+        return $this->role === 3;
+    }
+    public function isCustomer() {
+        return $this->role === 4;
+    }
     /**
      * @function: login
      *
@@ -70,18 +82,36 @@ class Auth_Loader {
      *
      * @return: message
      */
-    public function signup($username, $fullname, $password, $email, $sdt, $role) {
+    public function signup($username, $fullname, $password, $email, $sdt, $role, $vendor_id=-1) {
         if (!$this->checkvalid($username, $password)) return 'Username or password must be [a-zA-Z0-9-_.@] and max length is 32';
         $statement = "SELECT * FROM user WHERE username=?";
         $result = $this->db->query($statement, "s", array($username));
         if ($result->num_rows > 0) {
             return 'User existed!';
-        } else {
-            $statement = "INSERT INTO user (username,fullname,password,email,sdt,role) VALUES (?,?,?,?,?,?)";
-            $this->db->query($statement, "sssssi", array($username, $fullname, password_hash($password, PASSWORD_BCRYPT), $email, $sdt, $role));
-            if ($this->db->getError()) return 'Sign up failed!';
-            return 'Sign up successfully!';
+        } 
+        if ($role === 3 or $role === 2){
+            $statement = "SELECT * FROM vendor WHERE id=?";
+            $result = $this->db->query($statement, "i", array($vendor_id));
+            if ($result->num_rows === 0) {
+                return 'Vendor not found!';
+            } 
         }
+        $statement = "INSERT INTO user (username,fullname,password,email,sdt,role) VALUES (?,?,?,?,?,?)";
+        $this->db->query($statement, "sssssi", array($username, $fullname, password_hash($password, PASSWORD_BCRYPT), $email, $sdt, $role));
+        // Get new user_id
+        $statement = "SELECT * from user JOIN user_role where user.role = user_role.role and user.username=?";
+        $result = $this->db->query($statement, "s", array($username));
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $output[] = $row;
+            }
+            $new_user = $output[0];
+        } else return 'false';
+        // 
+        $statement = "INSERT INTO vendor_owner (user_id,vendor_id) VALUES (?,?)";
+        $this->db->query($statement, "ii", array($new_user['id'],$vendor_id));
+        if ($this->db->getError()) return 'Sign up failed!';
+        return 'Sign up successfully!';
     }
 
     public function update($username, $fullname, $password, $email, $sdt) {

@@ -3,6 +3,7 @@
 ob_start();
 session_start(); 
 // Đường dẫn tới hệ  thống
+define('PATH_ROOT', __DIR__ );
 define('PATH_SYSTEM', __DIR__ .'/system');
 define('PATH_APPLICATION', __DIR__ . '/site');
 date_default_timezone_set('Asia/Ho_Chi_Minh');

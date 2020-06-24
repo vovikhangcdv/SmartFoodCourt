@@ -23,7 +23,15 @@ class Order_Controller extends Base_Controller
         $data['vendors'] = get_all_by_tablename($Database,'vendor');
         for ($i=0; $i < count($data['vendors']); $i++){
             $data['vendors'][$i]['products'] = get_all_by_column($Database,'product','vendor_id',$data['vendors'][$i]['id']);
+            $number_of_food = count($data['vendors'][$i]['products']);
+            if ($number_of_food > 2 and $number_of_food < 5){
+                // die('ok');
+                for ($j=$number_of_food;$j < 5;$j++){
+                    $data['vendors'][$i]['products'][$j] = $data['vendors'][$i]['products'][rand(0,$number_of_food-1)];
+                }
+            }
         }
+        
         $this->load_header('header',$data);
         $this->view->load('vendor_list',$data);
         $this->view->load('footer',$data);

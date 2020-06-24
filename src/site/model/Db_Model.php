@@ -44,6 +44,7 @@ function get_user_by_id($Database,$id){
 }
 function delete_by_id($Database,$table,$id){
     $statement = "DELETE FROM ${table} where id=?";
+    echo("DELETE FROM ${table} where id=$id");
     $result = $Database->query($statement, 'i', array($id));
     return $Database->getError();
 }
@@ -194,4 +195,29 @@ function get_all_user_join_role($Database) {
             return $output;
         } else return false;
     }
+function get_vendor_id_by_user_id($Database,$user_id){
+    $statement = "SELECT vendor_id from vendor_owner where user_id=?";
+    $result = $Database->query($statement, "i", array(intval($user_id)));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
+function insert_vendor($Database,$name,$description,$photo){
+    $statement = "INSERT INTO vendor (name,description,photo) values (?,?,?)";
+    $Database->query($statement, "sss", array($name,$description,$photo));
+    return $Database->getError();
+}
+function get_next_id($Database,$table,$database_name='SmartFoodCourt_DB'){
+    $statement = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ?";
+    $result = $Database->query($statement, "ss", array($database_name,$table));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
 ?>
