@@ -46,11 +46,15 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a  onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')"><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
-                                <?php if($product['is_ready'] == 1): ?>
+                            <?php if($product['is_ready'] == 1): ?>
+                                <h4 class="media-heading"><a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" ><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
+                                <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
+                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
                                 <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
                                 <?php else:?>
-                                <br><div style="padding-top:10px" class="mu-readmore-btn" tabindex="-1"><del>Unavailable</del></div>
+                                <h4 class="media-heading"><a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" ><del><?= htmlentities($product['product_name'],ENT_QUOTES)?></del></a></h4>
+                                <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
+                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
                                 <?php endif;?>
                             </div>
                             </div>
@@ -76,13 +80,15 @@
                                 </a>
                             </div>
                             <div class="media-body">
+                                <?php if($product['is_ready'] == 1): ?>
                                 <h4 class="media-heading"><a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" ><?= htmlentities($product['product_name'],ENT_QUOTES)?></a></h4>
                                 <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
                                 <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
-                                <?php if($product['is_ready'] == 1): ?>
                                 <br><div style="padding-top:10px" onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" type="button" class="mu-readmore-btn" tabindex="-1">Add to cart</div>
                                 <?php else:?>
-                                <br><div style="padding-top:10px" class="mu-readmore-btn" tabindex="-1"><del>Unavailable</del></div>
+                                <h4 class="media-heading"><a onclick="submit_form('add_to_cart','product_id','<?= $product['product_id']; ?>')" ><del><?= htmlentities($product['product_name'],ENT_QUOTES)?></del></a></h4>
+                                <span class="mu-menu-price"><?= $product['price']?>VNĐ</span>
+                                <!-- <p><?= htmlentities($product['description'],ENT_QUOTES)?></p> -->
                                 <?php endif;?>
                         </li>
                             <?php endif; ?>

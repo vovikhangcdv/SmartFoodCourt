@@ -48,6 +48,18 @@
     }
     document.getElementById(id_form).submit(); // Form submission
   }
+  function send_request(url,post_message){
+    $.ajax({        
+        url: url ,
+        data: post_message,
+        type: 'POST',
+        success: function (resp) {
+        },
+        error: function(e){
+            alert('Error: '+e);
+        }  
+    });
+  }
   </script>
   </body>
 </html>

@@ -80,7 +80,7 @@
             <li><a href="<?= PATH_INDEX ?>?c=load_page&page=contact">CONTACT</a></li>
             <?php if (isset($_SESSION['role']) and $_SESSION['role'] === 2): ?>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">My Vendor<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">MY STORE<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
                 <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>                                          
               </ul>
