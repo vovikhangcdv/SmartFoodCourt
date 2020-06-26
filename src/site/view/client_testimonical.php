@@ -18,30 +18,30 @@
                   <li>
                     <div class="mu-testimonial-single">                   
                       <div class="mu-testimonial-info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
+                        <p>Phở ở đây rất ngon, sợi phở vừa dai vừa thấm được nước ngọt của thịt, giá cả lại hợp lý, đánh giá 5 sao cho quầy, hi vọng sẽ tiếp tục giữ được phong độ như vậy.</p>
                       </div>
                       <div class="mu-testimonial-bio">
-                        <p>- David Muller</p>                      
+                        <p>- Mr Hùng</p>                      
                       </div>
                     </div>
                   </li>
                    <li>
                     <div class="mu-testimonial-single">                   
                       <div class="mu-testimonial-info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
+                        <p>This is the first time I came to Vietnam, the experience of food in BK Smart Food Court is wonderful, the restaurant is spacious and airy, especially the very good ordering function.</p>
                       </div>
                       <div class="mu-testimonial-bio">
-                        <p>- David Muller</p>                      
+                        <p>- Mathewer Lestin</p>                      
                       </div>
                     </div>
                   </li>
                    <li>
                     <div class="mu-testimonial-single">                   
                       <div class="mu-testimonial-info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
+                        <p>Vietnam. It grabs you and doesn’t let you go. Once you love it, you love it forever.</p>
                       </div>
                       <div class="mu-testimonial-bio">
-                        <p>- David Muller</p>                      
+                        <p>- Anthony Bourdain</p>                      
                       </div>
                     </div>
                   </li>
