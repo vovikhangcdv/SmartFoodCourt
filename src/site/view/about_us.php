@@ -12,17 +12,17 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <div class="mu-about-us-left">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam minus aliquid, itaque illum assumenda repellendus dolorem, dolore numquam totam saepe, porro delectus, libero enim odio quo. Explicabo ex sapiente sit eligendi, facere voluptatum! Quia vero rerum sunt porro architecto corrupti eaque corporis eum, enim soluta, perferendis dignissimos, repellendus, beatae laboriosam.</p>                              
+                <div class="mu-about-us-left" style="font-size:22px">
+                 <p>You want to enjoy delicious foods like in a luxurious restaurant or a monumental food court located in the heart of Sai Gon, or sip and enjoy a cup of coffee after a long tired day, or even sit and drink some water and chat with your friends after class, etc. You do not have to go far but still able to enjoy delicious food right next to your university. Our BK Smart Food Court with beautiful views for you to take some photos, and enjoy delicious foods.</p>                              
                   <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>                    
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>
+                    <li>We commit to serve you with delicious and organic foods which have HACCP.</li>
+                    <li>We always update menu to make it more diverse, which will give you more choices.</li>
+                    <li>We offer an affordable menu that is suitable for students.</li>                    
+                    <li>We provide an ideal environment for group-work, studying or meetings with friends.</li>
+                    <li>We have a team of professional chefs from grand restaurants, some from Europe and one Michelin star chef.</li>
+                    <li>We will always give you the most friendly and comfortable service.</li>
                   </ul>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque similique molestias est quod reprehenderit, quibusdam nam qui, quam magnam. Ex.</p>  
+                  <p>Bonjour. Gracias. Te amo. Adiós.</p>  
                 </div>
               </div>
               <div class="col-md-6">
