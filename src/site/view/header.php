@@ -82,7 +82,9 @@
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">MY STORE<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
+                <?php if($_SESSION['role'] === 3): ?>
                 <li><a href="<?= PATH_INDEX ?>?c=bill&a=getBillCook">View Order</a></li>  
+                <?php endif;?>
                 <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>                                          
               </ul>
             </li>

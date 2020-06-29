@@ -4,8 +4,8 @@
         <div class="col-md-12">
         <div class="mu-footer-area">
            <div class="mu-footer-social">
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-youtube"></span></a>
+            <a href="<?= PATH_INDEX ?>"><span class="fa fa-facebook"></span></a>
+            <a href="<?= PATH_INDEX ?>"><span class="fa fa-youtube"></span></a>
           </div>
           <div class="mu-footer-copyright">
             <p>Designed by <a rel="nofollow">Homelessness</a></p>
