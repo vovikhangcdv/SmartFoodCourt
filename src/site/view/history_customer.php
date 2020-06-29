@@ -86,6 +86,7 @@
                                 <th>Vendor</th>
                                 <th>Date</th>
                                 <th style="text-align:right;">Total (VNĐ)</th>
+                                <th style="text-align:right;">Status</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -95,6 +96,11 @@
                                 <td><?= htmlentities($bill['vendor']['name'], ENT_QUOTES, "UTF-8"); ?></td>
                                 <td><?= date("F j, Y, g:i a", $bill['timestamp_order']) ?></td>
                                 <td style="text-align:right;"><?= $bill['total'] ?></td>
+                                <?php if ($bill['timestamp_finish'] !== -1) : ?>
+                                    <td style="text-align:right;" class="text-success"><b>Done</b></td>
+                                <?php else: ?>
+                                    <td style="text-align:right;" class="text-warning"><b><i>Pending ... </b></i></td>
+                                <?php endif; ?>
                                 <td style="text-align:center;">
                                     <button class="mu-browsmore-btn" data-toggle="modal" data-target="#billmodal<?= $order_id ?>">
                                         Detail
@@ -108,80 +114,79 @@
                 </div>
             </div>
         </div>
-        
     </div>
 
-<?php foreach ($list_bill as $order_id => $bill) : ?>
-    <!-- The Modal -->
-    <div class="modal" id="billmodal<?= $order_id ?>">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <?php foreach ($list_bill as $order_id => $bill) : ?>
+        <!-- The Modal -->
+        <div class="modal" id="billmodal<?= $order_id ?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                <!-- Modal Header -->
+                    <!-- Modal Header -->
 
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="panel panel-info panel-shadow">
-                        <div class="panel-heading">
-                            <h3>
-                                <img class="img-circle img-thumbnail" src="https://bootdey.com/img/Content/user_3.jpg">
-                                <?= htmlentities($bill['user']['fullname'], ENT_QUOTES, "UTF-8") ?>
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead style="background-color:#c1a35f">
-                                        <tr>
-                                            <th></th>
-                                            <th>Product</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach ($bill['orders'] as $stt=>$order): ?>
-                                        <tr>
-                                            <td><img width="100" height="100" src="<?= $order['product']['photo'] ?>" class="img-cart"></td>
-                                            <td><strong><?= htmlentities($order['product']['product_name'], ENT_QUOTES, "UTF-8") ?></strong></td>
-                                            <td><?= $order['quantity'] ?></td>
-                                            <td><?= $order['product']['price'] ?></td>
-                                            <td><?= $order['money'] ?></td>
-                                        </tr>
-                                        <?php endforeach;?>
-                                        <tr>
-                                            <td colspan="6">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4" class="text-right">VAT</td>
-                                            <td><?= $bill['additional_money'] ?></td>
-                                        </tr>
-                                        <tr style="background-color:#c1a35f">
-                                            <td colspan="2"><?= htmlentities($bill['vendor']['name'], ENT_QUOTES, "UTF-8") ?></td>
-                                            <td>Time: <?= date("F j, Y, g:i a", $bill['timestamp_order']) ?></td>
-                                            
-                                            <td class="text-right"><strong>Total (VNĐ)</strong></td>
-                                            <td><?= $bill['total'] ?></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="panel panel-info panel-shadow">
+                            <div class="panel-heading">
+                                <h3>
+                                    <img class="img-circle img-thumbnail" src="https://bootdey.com/img/Content/user_3.jpg">
+                                    <?= htmlentities($bill['user']['fullname'], ENT_QUOTES, "UTF-8") ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead style="background-color:#c1a35f">
+                                            <tr>
+                                                <th></th>
+                                                <th>Product</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($bill['orders'] as $stt => $order) : ?>
+                                                <tr>
+                                                    <td><img width="100" height="100" src="<?= $order['product']['photo'] ?>" class="img-cart"></td>
+                                                    <td><strong><?= htmlentities($order['product']['product_name'], ENT_QUOTES, "UTF-8") ?></strong></td>
+                                                    <td><?= $order['quantity'] ?></td>
+                                                    <td><?= $order['product']['price'] ?></td>
+                                                    <td><?= $order['money'] ?></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                            <tr>
+                                                <td colspan="6">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4" class="text-right">VAT</td>
+                                                <td><?= $bill['additional_money'] ?></td>
+                                            </tr>
+                                            <tr style="background-color:#c1a35f">
+                                                <td colspan="2"><?= htmlentities($bill['vendor']['name'], ENT_QUOTES, "UTF-8") ?></td>
+                                                <td>Time: <?= date("F j, Y, g:i a", $bill['timestamp_order']) ?></td>
+
+                                                <td class="text-right"><strong>Total (VNĐ)</strong></td>
+                                                <td><?= $bill['total'] ?></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-    <!-- end -->
-<?php endforeach; ?>
+        <!-- end -->
+    <?php endforeach; ?>
 
     </div>
 
