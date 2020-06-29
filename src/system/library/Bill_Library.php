@@ -7,17 +7,19 @@ class Bill_Library {
     public $money;
     public $additional_money;
     public $timestamp_order;
+    public $timestamp_finish;
     public $total;
     public function __construct()
     {
         require_once(PATH_APPLICATION . '/model/Db_Model.php');
     }
-    public function generate_bill($Database,$user,$vendor,$timestamp_order,$list_orders)
+    public function generate_bill($Database,$user,$vendor,$timestamp_order,$timestamp_finish,$list_orders)
     {
         $id = 0;
         $this->vendor = $vendor;
         $this->user = $user;
         $this->timestamp_order = $timestamp_order;
+        $this->timestamp_finish = $timestamp_finish;
         foreach ($list_orders as $product_id => $quantity) {
             $product = get_by_column($Database, 'product', 'product_id', intval($product_id));
             $this->orders[$id]['product'] = $product;
@@ -61,6 +63,9 @@ class Bill_Library {
     }
     public function get_timestamp_order() {
         return $this->timestamp_order;
+    }
+    public function get_timestamp_finish() {
+        return $this->timestamp_finish;
     }
     public function get_user() {
         return $this->user;
