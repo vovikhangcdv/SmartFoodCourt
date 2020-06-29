@@ -176,6 +176,16 @@ function get_all_by_column($Database,$table,$column,$value){
         return $output;
     } else return false;
 }
+function get_order_cook($Database,$vendor_id){
+    $statement = "SELECT * from orders where vendor_id = ? and timestamp_finish = -1";
+    $result = $Database->query($statement, "i", array(intval($vendor_id)));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output;
+    } else return false;
+}
 function get_order_by_order_id($Database,$order_id){
     $result = $Database->query("SELECT * FROM order where order_id = ?", 'i', array($order_id));
     if ($result->num_rows > 0) {
