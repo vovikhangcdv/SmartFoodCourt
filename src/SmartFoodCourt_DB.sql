@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 24, 2020 at 11:37 AM
--- Server version: 5.7.26-0ubuntu0.18.04.1-log
--- PHP Version: 7.3.6-1+ubuntu18.04.1+deb.sury.org+1
+-- Generation Time: Jun 29, 2020 at 03:19 PM
+-- Server version: 5.7.30-0ubuntu0.18.04.1-log
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -63,10 +62,15 @@ INSERT INTO `category_product` (`id`, `catname`, `vendor_id`) VALUES
 (2, 'LUNCH', 20),
 (3, 'DINNER', 20),
 (4, 'DRINK', 20),
-(5, 'BREAKFAST', 21),
-(6, 'LUNCH', 21),
-(7, 'DINNER', 21),
-(8, 'DESSERT', 21);
+(14, 'CAKE', 23),
+(15, 'SNACK', 23),
+(16, 'DRINK', 23),
+(17, 'HOT FOOD', 24),
+(18, 'COOL FOOD', 24),
+(19, 'DRINK', 24),
+(20, 'COFFEE', 25),
+(21, 'TEA ', 25),
+(22, 'MILK AND OTHERS', 25);
 
 -- --------------------------------------------------------
 
@@ -141,7 +145,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `order_id`, `vendor_id`, `customer_id`, `product_id`, `quantity`, `timestamp_order`, `timestamp_finish`) VALUES
 (17, 8, 20, 9, 23, 1, 1592908949, -1),
 (18, 8, 20, 9, 15, 1, 1592908949, -1),
-(19, 9, 20, 18, 22, 1, 1592968402, -1);
+(19, 9, 20, 18, 22, 1, 1592968402, -1),
+(20, 10, 20, 19, 14, 7, 1593324545, -1);
 
 -- --------------------------------------------------------
 
@@ -166,18 +171,40 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `category_id`, `product_name`, `description`, `price`, `photo`, `vendor_id`, `is_ready`) VALUES
 (14, 2, 'Com Suon', '', 35000, 'assets/img/product/14.jpg', 20, 1),
-(15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 20, 0),
+(15, 2, 'Pho', '', 40000, 'assets/img/product/15.jpg', 20, 1),
 (16, 3, 'Bun Bo Hue', '', 35000, 'assets/img/product/16.jpg', 20, 1),
-(18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 20, 0),
+(18, 4, 'Mojito', '', 25000, 'assets/img/product/18.jpg', 20, 1),
 (20, 2, 'Com Chien', '', 35000, 'assets/img/product/20.jpg', 20, 1),
 (21, 1, 'Chao', '', 30000, 'assets/img/product/21.jpg', 20, 1),
 (22, 1, 'Bún Riêu', 'Ngon cực kì', 35000, 'assets/img/product/22.jpg', 20, 1),
 (23, 4, 'Coca-Cola', '', 12000, 'assets/img/product/23.jpg', 20, 1),
-(24, 5, 'Bún riêu', 'Quá ngon', 40000, 'assets/img/product/22.jpg', 21, 1),
-(26, 8, 'Coca-cola', 'Nuoc uong', 10000, 'assets/img/product/23.jpg', 21, 1),
-(28, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 21, 1),
-(29, 5, 'Bún riêu', '', 40000, 'assets/img/product/22.jpg', 21, 1),
-(33, 2, 'Cháo gà', 'Chào gà ăn sáng nhé', 32000, 'assets/img/product/33.jpg', 20, 0);
+(33, 2, 'Cháo gà', 'Chào gà ăn sáng nhé', 32000, 'assets/img/product/33.jpg', 20, 1),
+(36, 14, 'Tiramisu', 'Tiramisu (from the Italian language, spelled tiramisù, [ˌtiramiˈsu], meaning \"pick me up\" or \"cheer me up\") is a coffee-flavoured Italian dessert. It is made of ladyfingers (savoiardi) dipped in coffee, layered with a whipped mixture of eggs, sugar and mascarpone cheese, flavoured with cocoa.', 25000, 'assets/img/product/36.jpeg', 23, 1),
+(37, 14, 'Mint-Oreo', 'Mint Oreo Cheesecake is made with an Oreo crust filled with chopped mint Oreos, chocolate sauce and mint cheesecake! It\'s a mint chocolate lover\'s dream!', 20000, 'assets/img/product/37.jpeg', 23, 1),
+(38, 14, 'Doughnut', 'A small cake of sweetened or, sometimes, unsweetened dough fried in deep fat, typically shaped like a ring or, when prepared with a filling, a ball.', 15000, 'assets/img/product/38.jpeg', 23, 1),
+(39, 15, 'Snack Mực', '', 5000, 'assets/img/product/39.jpg', 23, 1),
+(40, 15, 'Snack Bắp Ngọt', '', 5000, 'assets/img/product/40.jpg', 23, 1),
+(41, 15, 'Snack Toonies', '', 10000, 'assets/img/product/41.jpg', 23, 1),
+(42, 16, 'Caramel Macchiato', 'Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with a caramel drizzle for an oh-so-sweet finish.', 20000, 'assets/img/product/42.jpg', 23, 1),
+(43, 16, 'Latte Coffee', 'Caffè latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso, two-thirds heated milk and about 1cm of foam. Depending on the skill of the barista, the foam can be poured in such a way to create a picture.', 20000, 'assets/img/product/43.jpg', 23, 1),
+(44, 17, 'Súp cua', 'Súp ngon thơm lừng nấu với cua và cua', 30000, 'assets/img/product/44.png', 24, 1),
+(45, 17, 'Bắp xào', 'Bắp xào chất lượng cao', 20000, 'assets/img/product/45.jpg', 24, 1),
+(46, 18, 'Bánh trán trộn', '', 10000, 'assets/img/product/46.png', 24, 1),
+(47, 18, 'Bánh bèo', '', 15000, 'assets/img/product/47.jpg', 24, 1),
+(48, 18, 'Bò bía', '', 20000, 'assets/img/product/48.jpg', 24, 1),
+(49, 17, 'Bún đậu', '', 30000, 'assets/img/product/49.jpg', 24, 1),
+(50, 19, 'Trà chanh', '', 10000, 'assets/img/product/50.jpg', 24, 1),
+(53, 19, 'Nước sấu', '', 10000, 'assets/img/product/53.jpg', 24, 1),
+(54, 20, 'Latte', '', 20000, 'assets/img/product/54.jpg', 25, 1),
+(55, 20, 'Espresso', '', 20000, 'assets/img/product/55.jpg', 25, 1),
+(56, 20, 'Mocha', '', 25000, 'assets/img/product/56.jpg', 25, 1),
+(57, 20, 'Cappuccino', '', 25000, 'assets/img/product/57.jpg', 25, 1),
+(58, 21, 'Trà chanh', '', 15000, 'assets/img/product/58.jpg', 25, 1),
+(59, 21, 'Trà sen', '', 25000, 'assets/img/product/59.jpg', 25, 1),
+(60, 21, 'Trà hoa quả', '', 25000, 'assets/img/product/60.jpg', 25, 1),
+(61, 21, 'Trà ô long', '', 20000, 'assets/img/product/61.jpg', 25, 1),
+(62, 22, 'Trà phô mai sữa', '', 30000, 'assets/img/product/62.jpg', 25, 1),
+(63, 22, 'Sữa tươi trân châu đường đen', '', 40000, 'assets/img/product/63.jpeg', 25, 1);
 
 -- --------------------------------------------------------
 
@@ -244,8 +271,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `fullname`, `password`, `email`, `sdt`, `role`) VALUES
-(9, 'admin', 'Admin', '$2y$10$CWK209WNP7Jv6QogS4JTZuh9afycGiHogHd8LnJq0P0nhYs4V77iW', 'admin@gmail.com', '1234123', 0),
-(18, 'khang', 'Võ Vĩ Khang', '$2y$10$tlfFkV.ZNBznUxkANogCkOzJXdspLI2rJOfL.4jpjM.BBhF8k97AG', 'khang.vo2000@hcmut.edu.vn', '0967830088', 2);
+(9, 'admin', 'Admin', '$2y$10$CWK209WNP7Jv6QogS4JTZuh9afycGiHogHd8LnJq0P0nhYs4V77iW', 'admin1@gmail.com', '1234123', 0),
+(18, 'khang', 'Võ Vĩ Khang', '$2y$10$tlfFkV.ZNBznUxkANogCkOzJXdspLI2rJOfL.4jpjM.BBhF8k97AG', 'khang.vo2000@hcmut.edu.vn', '0967830088', 2),
+(19, 'hoangkhoa', 'Hoang Khoa', '$2y$10$gP9BySL3ryfyYyA0osJtUuVfkNWQ0bmRgP7GfSX1AxEa5pRLPu016', 'hoangkhoa@gmail.com', '0978145757', 2),
+(20, 'hoangkhoacook', 'Hoang Khoa Cook', '$2y$10$rf855SDjXXRNbS5pI6iEGeFsJ8yTr5l/XQIvEo4RuWRyqbBNnZC6m', 'cook@gmail.com', '0978145757', 3),
+(21, 'khanh', 'Ngô Quốc Khánh', '$2y$10$k3HQ6FMk301T9hE2ZDiUIO93hsxgVMif/w5FYDCx6hjjCYHD9bch6', 'khanh@gmail.com', '0123456789', 2),
+(22, 'khoango', 'Ngô Anh Khoa', '$2y$10$46YmzS5GjNsamMObCfrWt.LkWmWrSf.ag1QcAf01e2zEllBaeVjzu', 'khoango@gmail.com', '0913092929', 2);
 
 -- --------------------------------------------------------
 
@@ -287,8 +318,10 @@ CREATE TABLE `vendor` (
 --
 
 INSERT INTO `vendor` (`id`, `name`, `description`, `photo`) VALUES
-(20, 'Khang\'s Food', 'Quán ăn của Khang', 'assets/img/vendor/20.png'),
-(21, 'Khánh\'s Cắt Cổ', 'Quán này đồ ăn dở ẹc', 'assets/img/vendor/21.png');
+(20, 'Vietnamese Traditional Food Shop', 'We provide famous Vietnamese traditional food here!', 'assets/img/vendor/20.jpg'),
+(23, 'Sweet Food Shop', 'We sell a lot of sweet food of various category ! <3', 'assets/img/vendor/23.jpg'),
+(24, 'Vietnamese Street Food Shop', 'What is Street Food? The ancient occupation of “making something to eat”, finds a new future and conquers the food of our shop.', 'assets/img/vendor/24.jpg'),
+(25, 'BKDrinks', 'We have various popular drinks !', 'assets/img/vendor/25.jpg');
 
 -- --------------------------------------------------------
 
@@ -310,7 +343,11 @@ INSERT INTO `vendor_owner` (`id`, `user_id`, `vendor_id`) VALUES
 (2, 15, 1),
 (3, 16, 1),
 (4, 17, 2),
-(5, 18, 20);
+(5, 18, 20),
+(6, 19, 23),
+(7, 20, 23),
+(8, 21, 24),
+(9, 22, 25);
 
 --
 -- Indexes for dumped tables
@@ -397,7 +434,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `category_product`
 --
 ALTER TABLE `category_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -409,13 +446,13 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `purchase`
@@ -433,19 +470,19 @@ ALTER TABLE `purchase_detail`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `vendor`
 --
 ALTER TABLE `vendor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `vendor_owner`
 --
 ALTER TABLE `vendor_owner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
