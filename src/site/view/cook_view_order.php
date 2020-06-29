@@ -11,7 +11,7 @@
                     </div>
                     <aside style="padding-left: 180px;">
                         <table style="width:80%; font-size:large;" class="j2store-cart-table table table-bordered">
-                            <thead>
+                            <thead style="background-color:#c1a35f">
                                 <tr>
                                     <th style="text-align:center; width:15%;">Order ID</th>
                                     <th style="text-align:center; width:25%;">Product</th>
@@ -20,68 +20,46 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td style="vertical-align:middle; text-align:center;">
-                                        <span class="cart-thumb-image">
-                                            015
-                                        </span>
-                                    </td>
-                                    <td style="text-align:center">
-                                        <div class="row-md-6">
-                                            <span>Bún Bò</span>
-                                        </div>
-                                    </td>
-                                    <td style="text-align:center;">
-                                        <div class="row-md-6">
-                                            <span>5</span>
-                                        </div>
-                                    </td>
-                                    <td style="vertical-align:middle; text-align:center;">
-                                        <div class="col-md-6" style="padding:2%">
-                                            08:00
-                                        </div>
-                                        <div class="col-md-6">
-                                            <a class="mu-readmore-btn" style="padding:8%" tabindex="0">Ready</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="vertical-align:middle; text-align:center;">
-                                        <span class="cart-thumb-image">
-                                            016
-                                        </span>
-                                    </td>
-                                    <td style="text-align:center">
-                                        <div class="row-md-6">
-                                            <span>Bún Bò</span>
-                                        </div>
-                                        <div class="row-md-6" style="border-top:dotted black 1px">
-                                            <span>Cơm</span>
-                                        </div>
-                                        <div class="row-md-6" style="border-top:dotted black 1px">
-                                            <span>Cháo</span>
-                                        </div>
-                                    </td>
-                                    <td style="text-align:center;">
-                                        <div class="row-md-6">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="row-md-6" style="border-top:dotted black 1px">
-                                            <span>2</span>
-                                        </div>
-                                        <div class="row-md-6" style="border-top:dotted black 1px">
-                                            <span>3</span>
-                                        </div>
-                                    </td>
-                                    <td style="vertical-align:middle; text-align:center;">
-                                        <div class="col-md-6" style="padding:2%">
-                                            08:25
-                                        </div>
-                                        <div class="col-md-6">
-                                            <a class="mu-readmore-btn" style="padding:8%" tabindex="0">Ready</a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <?php foreach ($list_bill as $order_id => $bill) : ?>
+                                    <tr>
+                                        <td style="vertical-align:middle; text-align:center;">
+                                            <span class="cart-thumb-image">
+                                                <?= $order_id ?>
+                                            </span>
+                                        </td>
+                                        <td style="text-align:center">
+                                            <?php foreach ($bill['orders'] as $stt => $order) : ?>
+                                                <?php if ($stt !== count($bill['orders']) - 1) : ?>
+                                                    <div class="row-md-6" style="border-bottom:dotted black 1px">
+                                                    <?php else : ?>
+                                                        <div class="row-md-6">
+                                                        <?php endif; ?>
+                                                        <span><?= htmlentities($order['product']['product_name'], ENT_QUOTES, "UTF-8") ?></span>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <?php foreach ($bill['orders'] as $stt => $order) : ?>
+                                                <?php if ($stt !== count($bill['orders']) - 1) : ?>
+                                                    <div class="row-md-6" style="border-bottom:dotted black 1px">
+                                                    <?php else : ?>
+                                                        <div class="row-md-6">
+                                                        <?php endif; ?>
+                                                        <span><?= $order['quantity'] ?></span>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                        </td>
+                                        <td style="vertical-align:middle; text-align:center;">
+                                            <div class="col-md-6" style="padding:2%">
+                                                <?= date("F j, Y, g:i a", $bill['timestamp_order']) ?>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div type="button" onclick="submit_form('set_ready','order_id','<?= $order_id ?>')" class="btn mu-readmore-btn" style="padding:8%" tabindex="0">Set ready</div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </aside>
@@ -89,4 +67,8 @@
             </div>
         </div>
     </div>
+    <form action="<?= PATH_INDEX ?>?c=bill&a=set_ready" id="set_ready" method="POST">
+        <input type="text" id="order_id" name="order_id" value="a" style="display:none">
+        <input type="hidden" name="token" value="<?= $_SESSION['token']; ?>">
+    </form>
 </section>

@@ -78,10 +78,11 @@
             <li><a href="<?= PATH_INDEX ?>?c=load_page&page=about_us">ABOUT US</a></li>
             <li><a href="<?= PATH_INDEX ?>?c=load_page&page=our_team">OUR TEAM</a></li>
             <li><a href="<?= PATH_INDEX ?>?c=load_page&page=contact">CONTACT</a></li>
-            <?php if (isset($_SESSION['role']) and $_SESSION['role'] === 2): ?>
+            <?php if (isset($_SESSION['role']) and ($_SESSION['role'] === 2 or $_SESSION['role'] === 3)): ?>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">MY STORE<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
+                <li><a href="<?= PATH_INDEX ?>?c=bill&a=getBillCook">View Order</a></li>  
                 <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>                                          
               </ul>
             </li>
@@ -91,7 +92,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html"><?= htmlspecialchars($header['user']['fullname'], ENT_QUOTES, 'UTF-8'); ?><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
                 <li><a href="<?= PATH_INDEX ?>?c=info">Profile</a></li>
-                <li><a href="<?= PATH_INDEX ?>?c=bill ">Order History</a></li>
+                <li><a href="<?= PATH_INDEX ?>?c=bill&a=getBillCustomer ">Order History</a></li>
                 <li><a href="<?= PATH_INDEX ?>?c=update">Account</a></li>
                 <li><a href="<?= PATH_INDEX ?>?c=logout">Logout</a></li>                                            
               </ul>
