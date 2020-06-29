@@ -26,15 +26,9 @@
 
         <?php if($_SESSION['role'] == 0): ?>
         <div class="float-right" style="margin:2px">
-          <div class="btn btn-danger" onclick="submit_form('delete_user','username_delete','<?=$row['username'] ?>')" type="button"> Delete</div>
-        </div>
-        <div class="float-right" style="margin:2px">
           <div class="btn btn-dark" onclick="submit_form('update_user','username_update','<?=$row['username'] ?>')" type="button"> Update</div>
         </div>
         <?php endif;?>
-        <div class="float-right" style="margin:2px">
-          <div class="btn btn-success" onclick="submit_form('inbox','inbox_id','<?=$row['id'] ?>')" type="button"> Inbox</div>
-        </div>
         <div class="float-right" style="margin:2px">
           <div class="btn btn-success" onclick="submit_form('info','user_id','<?=$row['id'] ?>')" type="button"> Info</div>
         </div>

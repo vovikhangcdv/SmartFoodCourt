@@ -129,7 +129,6 @@
                         <div class="small text-muted text-truncate"><?= htmlentities($message['message'][0]['message'], ENT_QUOTES, "UTF-8") ?></div>
                         </div></div>
                     <?php endforeach;?>
-                    <a class="dropdown-item text-center border-top" href="<?= PATH_INDEX ?>?c=message"><strong>View all messages</strong></a>
                     </div>
                 </li>
                 <li class="c-header-nav-item dropdown">
@@ -142,10 +141,6 @@
                         <svg class="c-icon mfe-2">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                         </svg> Profile</a>
-                        <a class="dropdown-item" href="<?= PATH_INDEX ?>?c=message">
-                        <svg class="c-icon mfe-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                        </svg> Messages<span class="badge badge-success mfs-auto"></span></a>
                         <a class="dropdown-item" href="<?= PATH_INDEX ?>?c=update">
                         <svg class="c-icon mfe-2">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
