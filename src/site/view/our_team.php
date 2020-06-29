@@ -19,13 +19,13 @@
                     </figure>
                     <div class="mu-single-chef-info">
                       <h4>Võ Vĩ Khang</h4>
-                      <span>Back-end developer</span>
+                      <span>Toxicer</span>
                     </div>
                     <div class="mu-single-chef-social">
-                      <a href="https://www.facebook.com/vovikhangcdv"><i class="fa fa-facebook"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-twitter"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-google-plus"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://www.facebook.com/vovikhangcdv" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-google-plus"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </li>
@@ -39,10 +39,10 @@
                       <span>Anh Chí</span>
                     </div>
                     <div class="mu-single-chef-social">
-                      <a href="https://facebook.com/anhkhoa.ngo.169"><i class="fa fa-facebook"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-twitter"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-google-plus"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://facebook.com/anhkhoa.ngo.169" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-google-plus"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </li>
@@ -56,10 +56,10 @@
                       <span>Chủ trại cừu</span>
                     </div>
                     <div class="mu-single-chef-social">
-                      <a href="https://facebook.com/khanh.ngo0212"><i class="fa fa-facebook"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-twitter"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-google-plus"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://facebook.com/khanh.ngo0212" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-google-plus"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </li>
@@ -73,10 +73,10 @@
                       <span>A Khểnh</span>
                     </div>
                     <div class="mu-single-chef-social">
-                      <a href="https://www.facebook.com/Khoa9.327"><i class="fa fa-facebook"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-twitter"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-google-plus"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://www.facebook.com/Khoa9.327" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-google-plus"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </li>  
@@ -90,10 +90,10 @@
                       <span>Game thủ chuyên nghiệp</span>
                     </div>
                     <div class="mu-single-chef-social">
-                      <a href="https://www.facebook.com/AnthonyIT274"><i class="fa fa-facebook"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-twitter"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-google-plus"></i></a>
-                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://www.facebook.com/AnthonyIT274" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-google-plus"></i></a>
+                      <a href="<?= PATH_INDEX ?>?c=load_page&page=our_team" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </li>                  
