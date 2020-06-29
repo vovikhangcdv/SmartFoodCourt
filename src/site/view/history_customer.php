@@ -108,6 +108,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
 <?php foreach ($list_bill as $order_id => $bill) : ?>

@@ -12,17 +12,17 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <div class="mu-about-us-left" style="font-size:22px">
-                 <p>You want to enjoy delicious foods like in a luxurious restaurant or a monumental food court located in the heart of Sai Gon, or sip and enjoy a cup of coffee after a long tired day, or even sit and drink some water and chat with your friends after class, etc. You do not have to go far but still able to enjoy delicious food right next to your university. Our BK Smart Food Court with beautiful views for you to take some photos, and enjoy delicious foods.</p>                              
+                <div class="mu-about-us-left" style="font-size:130%; text-align:justify; font-family:Georgia; ">
+                 <p style="color:#444444;">You want to enjoy delicious foods like in a luxurious restaurant or a monumental food court located in the heart of Sai Gon, or sip and enjoy a cup of coffee after a long tired day, or even sit and drink some water and chat with your friends after class, etc. You do not have to go far but still able to enjoy delicious food right next to your university. Our BK Smart Food Court with beautiful views for you to take some photos, and enjoy delicious foods.</p>                              
                   <ul>
-                    <li>We commit to serve you with delicious and organic foods which have HACCP.</li>
+                    <li>We commit to serve you with delicious and organic foods.</li>
                     <li>We always update menu to make it more diverse, which will give you more choices.</li>
                     <li>We offer an affordable menu that is suitable for students.</li>                    
                     <li>We provide an ideal environment for group-work, studying or meetings with friends.</li>
                     <li>We have a team of professional chefs from grand restaurants, some from Europe and one Michelin star chef.</li>
                     <li>We will always give you the most friendly and comfortable service.</li>
                   </ul>
-                  <p>Bonjour. Gracias. Te amo. Adiós.</p>  
+                  <p style="font-family:Courier;">WELCOME!</p>  
                 </div>
               </div>
               <div class="col-md-6">
