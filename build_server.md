@@ -17,3 +17,11 @@
 - `exit`
 - `mysql -u smartfoodcourt -p SmartFoodCourt_DB < SmartFoodCourt_DB.sql`
 - `service apache2 start`
+
+### Update database
+- `mysql -u root -p` -> Enter root password -> Inside mysql mode: 
+  + `drop database SmartFoodCourt_DB;`
+  + `create database SmartFoodCourt_DB;`
+  + `GRANT ALL PRIVILEGES ON SmartFoodCourt_DB.* TO 'smartfoodcourt'@'localhost';`
+  + `Ctrl + D` to exit mysql mode
+- `mysql -u root -p SmartFoodCourt_DB < /app/SmartFoodCourt_DB.sql`
