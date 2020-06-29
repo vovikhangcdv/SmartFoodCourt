@@ -14,7 +14,7 @@
         <div class="mu-restaurant-menu-content">
             <ul class="nav nav-tabs mu-restaurant-menu">
             <?php foreach ($menu['categories'] as $row): ?>
-            <?php if($active) echo('<li>'); else { echo('<li class="active">'); $active=1;} ?><a href="#<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>" data-toggle="tab"><?= htmlentities(ucfirst(strtolower($row['catname'])),ENT_QUOTES);?></a></li>  
+            <?php if($active) echo('<li>'); else { echo('<li class="active">'); $active=1;} ?><a href="#<?= md5($row['catname']);?>" data-toggle="tab"><?= htmlentities(ucfirst(strtolower($row['catname'])),ENT_QUOTES);?></a></li>  
             <?php endforeach; ?>
             </ul>
 
@@ -27,7 +27,7 @@
                 if ($row['id']==$menu['products'][$i]['category_id']) $counter_product_of_category+=1;
                 }
             ?>
-            <div class="tab-pane fade in <?php if(!$active2) { echo('active'); $active2=1;} ?>" id="<?= htmlentities(strtolower($row['catname']),ENT_QUOTES);?>">
+            <div class="tab-pane fade in <?php if(!$active2) { echo('active'); $active2=1;} ?>" id="<?= md5($row['catname']);?>">
                 <div class="mu-tab-content-area">
                 <div class="row">
                     <div class="col-md-6">
