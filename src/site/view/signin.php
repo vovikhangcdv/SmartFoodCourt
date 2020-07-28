@@ -44,6 +44,10 @@
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
                             </div>
                         </form>
+                        <div style='display:<?=(isset($message) and $message != NULL) ? "block" : "none" ?>'>
+                            <br>
+                            <div style="color:#FF0000" class=<?=$return ? "'alert alert-success'" : "'alert alert-danger'" ?> role="alert"><?=(isset($message) and $message != NULL) ? $message : "" ?></div>
+                        </div>
                         <div class="social-login">
                             <span class="social-label">Or login with</span>
                             <ul class="socials">
