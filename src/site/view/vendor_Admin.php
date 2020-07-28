@@ -28,11 +28,6 @@
     <div class="card-body">
         <?php foreach ($list_vendor as $row): ?>
             <nav aria-label="breadcrumb" role="navigation">
-                <?php if($_SESSION['role'] !== 2): ?>
-                <div class="float-right" style="margin:2px">
-                    <div class="btn btn-sm btn-danger" onclick="toggle('delete_challenge','<?=$row['id'] ?>','input_id_delete')" type="button"> Delete</div>
-                </div>
-                <?php endif; ?>
                 <div class="float-right" style="margin:2px">
                     <div class="btn btn-sm btn-success collapsed" type="button" data-toggle="collapse" data-target='#title<?=md5($row['id']) ?>' aria-expanded="false" aria-controls="title<?=md5($row['title']) ?>">Show/Hidden</div>
                 </div>
