@@ -7,6 +7,6 @@ This project is website BK Smart Food Court - the food ordering website.
 Our team:
 - Võ Vĩ Khang - `vovikhangcdv`
 - Nguyễn Hoàng Khoa `Hoangkhoaa`
-- Ngô Quốc Khánh
+- Ngô Quốc Khánh - `quockhanhut`
 - Ngô Anh Khoa - `cOrN_aK`
-- Nguyễn Văn Khoa
+- Nguyễn Văn Khoa - `nguyenvankhoa-dev`
