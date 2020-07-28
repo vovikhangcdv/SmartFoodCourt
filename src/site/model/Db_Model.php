@@ -151,9 +151,9 @@ function get_max_order_id($Database){
         else return $output[0]['max'];
     } else return false;
 }
-function insert_order($Database,$order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order){
-    $statement = "INSERT INTO orders (order_id,vendor_id,customer_id,product_id,quantity,timestamp_order) values (?,?,?,?,?,?)";
-    $Database->query($statement, "iiiiii", array($order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order));
+function insert_order($Database,$order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order,$timestamp_finish= -1){
+    $statement = "INSERT INTO orders (order_id,vendor_id,customer_id,product_id,quantity,timestamp_order,timestamp_finish) values (?,?,?,?,?,?,?)";
+    $Database->query($statement, "iiiiiii", array($order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order,$timestamp_finish));
     return $Database->getError();
 }
 function get_by_column($Database,$table,$column,$value){
@@ -248,5 +248,15 @@ function update_by_column($Database,$table, $column, $value,$condition_column, $
     $statement = "UPDATE {$table} SET {$column} = ? where {$condition_column} = ?";
     $Database->query($statement, "ss", array($value,$condition_value));
     return $Database->getError();
+}
+function count_distinct($Database,$table,$column){
+    $statement = "SELECT COUNT(DISTINCT ${column}) as counter FROM ${table}";
+    $result = $Database->query($statement, "", array());
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
 }
 ?>

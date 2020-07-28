@@ -57,7 +57,7 @@
                         </form>
                         <div style='display:<?=(isset($message) and $message != NULL) ? "block" : "none" ?>'>
                             <br>
-                            <div class=<?=$return ? "'alert alert-success'" : "'alert alert-danger'" ?> role="alert"><?=(isset($message) and $message != NULL) ? $message : "" ?></div>
+                            <div style="color:#FF0000" class=<?=$return ? "'alert alert-success'" : "'alert alert-danger'" ?> role="alert"><?=(isset($message) and $message != NULL) ? $message : "" ?></div>
                         </div>
                     </div>
                     <div class="signup-image">

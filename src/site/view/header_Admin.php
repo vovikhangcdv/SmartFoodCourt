@@ -85,6 +85,12 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
                     </svg> Add User</a>
             </li>
+            <li class="c-sidebar-nav-item">
+                <a class="c-sidebar-nav-link" href="<?= PATH_INDEX ?>?c=index">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart-pie"></use>
+                    </svg> Back</a>
+            </li>
 
 
         </ul>

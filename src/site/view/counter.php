@@ -8,30 +8,30 @@
             <ul class="mu-counter-nav">
               <li class="col-md-3 col-sm-3 col-xs-12">
                 <div class="mu-single-counter">
-                  <span>Fresh</span>
-                  <h3><span class="counter">55</span><sup>+</sup></h3>
-                  <p>Breakfast Items</p>
+                  <span>Foods</span>
+                  <h3><span class="counter"><?= $number_products ?></span><sup>+</sup></h3>
+                  <p></p>
                 </div>
               </li>
               <li class="col-md-3 col-sm-3 col-xs-12">
                 <div class="mu-single-counter">
-                  <span>Delicious</span>
-                  <h3><span class="counter">130</span><sup>+</sup></h3>
-                  <p>Lunch Items</p>
+                  <span>Vendors</span>
+                  <h3><span class="counter"><?= $number_vendors ?></span><sup>+</sup></h3>
+                  <p></p>
                 </div>
               </li>
                <li class="col-md-3 col-sm-3 col-xs-12">
                 <div class="mu-single-counter">
-                  <span>Hot</span>
-                   <h3><span class="counter">35</span><sup>+</sup></h3>
-                  <p>Coffee Items</p>
+                  <span>Customers</span>
+                   <h3><span class="counter"><?= $number_customers ?></span><sup>+</sup></h3>
+                  <p></p>
                 </div>
               </li>
                <li class="col-md-3 col-sm-3 col-xs-12">
                 <div class="mu-single-counter">
-                  <span>Satisfied</span>
-                  <h3><span class="counter">3562</span><sup>+</sup></h3>
-                  <p>Customers</p>
+                  <span>Orders</span>
+                  <h3><span class="counter"><?= $number_orders ?></span><sup>+</sup></h3>
+                  <p></p>
                 </div>
               </li>
             </ul>
