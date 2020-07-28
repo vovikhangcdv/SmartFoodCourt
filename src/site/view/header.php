@@ -55,7 +55,7 @@
   <!-- END SCROLL TOP BUTTON -->
   <!-- Start header section -->
   <header id="mu-header">  
-    <nav class="navbar navbar-default mu-main-navbar" role="navigation">  
+    <nav class="navbar navbar-default mu-main-navbar <?= (isset($header_hold) and ($header_hold == TRUE))?'navbar-bg-hold':'' ?>" role='navigation'>
       <div class="container">
         <div class="navbar-header">
           <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->

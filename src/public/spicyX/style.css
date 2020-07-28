@@ -220,7 +220,10 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 0;
 }
-
+.navbar-bg-hold {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+}
 /* ALL SECTION */
 
 /*scrol to top*/

@@ -7,11 +7,11 @@
           <?php $vendor = $vendors[$i] ?>
           <!-- Top slider single slide -->
           <div class="mu-top-slider-single">
-            <img src="<?= $vendor['photo'] ?>" style="width:1920px;height:950px" alt="img">
+            <img src="<?= xss_filter($vendor['photo']) ?>" style="width:100vw;height:950px" alt="img">
             <!-- Top slider content -->
-            <div class="mu-top-slider-content"><br><br>
-              <h2 class="mu-slider-title"><?= $vendor['name'] ?></h2>
-              <p>"<?= $vendor['description'] ?>"</p>
+            <div style="margin-top:30px" class="mu-top-slider-content"><br><br>
+              <h2 class="mu-slider-title"><?= xss_filter($vendor['name']) ?></h2>
+              <p>"<?= xss_filter($vendor['description']) ?>"</p>
               <a href="<?= PATH_INDEX ?>?c=order&a=set_vendor&vendor_id=<?= $vendor['id'] ?>" class="mu-readmore-btn">View all food</a>
               <section id="mu-chef">
                 <div class="container">
@@ -31,13 +31,13 @@
                                 <div class="mu-single-chef">
                                   <figure class="mu-single-chef-img">
                                     <a href="<?= PATH_INDEX ?>?c=order&a=set_vendor&vendor_id=<?= $vendor['id'] ?>">
-                                      <img style="width:275px;height:265px" src="<?= $product['photo'] ?>">
+                                      <img style="width:275px;height:265px" src="<?= xss_filter($product['photo']) ?>">
                                     </a>
 
                                   </figure>
                                   <div class="mu-single-chef-info">
-                                    <h4><?= $product['product_name'] ?></h4>
-                                    <span><?= $product['price'] ?> VND</span>
+                                    <h4><?= xss_filter($product['product_name']) ?></h4>
+                                    <span><?= xss_filter($product['price']) ?> VND</span>
                                   </div>
 
                                 </div>
