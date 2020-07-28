@@ -151,9 +151,9 @@ function get_max_order_id($Database){
         else return $output[0]['max'];
     } else return false;
 }
-function insert_order($Database,$order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order){
-    $statement = "INSERT INTO orders (order_id,vendor_id,customer_id,product_id,quantity,timestamp_order) values (?,?,?,?,?,?)";
-    $Database->query($statement, "iiiiii", array($order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order));
+function insert_order($Database,$order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order,$timestamp_finish= -1){
+    $statement = "INSERT INTO orders (order_id,vendor_id,customer_id,product_id,quantity,timestamp_order,timestamp_finish) values (?,?,?,?,?,?,?)";
+    $Database->query($statement, "iiiiiii", array($order_id,$vendor_id,$customer_id,$product_id,$quantity,$timestamp_order,$timestamp_finish));
     return $Database->getError();
 }
 function get_by_column($Database,$table,$column,$value){
