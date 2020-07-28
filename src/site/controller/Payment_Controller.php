@@ -26,9 +26,8 @@ class Payment_Controller extends Auth_Controller {
         };
     }
     public function successAction(){
-        $data['title'] = 'Success';
-        $data['header_hold'] = TRUE;
         $this->load_header('header',$data);
+        $this->view->load('slider',$data);
         $this->view->load('payment_success', $data);
         $this->view->load('footer',$data);
     }
