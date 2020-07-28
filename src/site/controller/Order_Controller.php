@@ -21,6 +21,7 @@ class Order_Controller extends Base_Controller
         global $Database;
         $this->model->load('Db');
         $data['vendors'] = get_all_by_tablename($Database,'vendor');
+        $data['header_hold'] = TRUE;
         for ($i=0; $i < count($data['vendors']); $i++){
             $data['vendors'][$i]['products'] = get_all_by_column($Database,'product','vendor_id',$data['vendors'][$i]['id']);
             $number_of_food = count($data['vendors'][$i]['products']);
@@ -71,7 +72,10 @@ class Order_Controller extends Base_Controller
 
     public function cancelAction(){
         $this->clean_up();
-        $this->indexAction();
+        if (isset($_GET['redirect'])){
+            header("Location: ".$_GET['redirect']);
+        }
+        else $this->indexAction();
     }
     public function addAction()
     {
@@ -130,7 +134,6 @@ class Order_Controller extends Base_Controller
         $this->model->load('Db');
         $this->config->load('debug_config');
         $order_id = get_max_order_id($Database);
-        // die(var_dump($order_id));
         if ($order_id === false) die('Error');
         $new_order_id = $order_id + 1;
         $this->library->load('Bill');
@@ -139,10 +142,6 @@ class Order_Controller extends Base_Controller
         $this->library->load('Payment');
         $Payment = new Payment_Library();
         $Payment->init_payment($temp_order->get_total(),$order_id);
-        die(var_dump($temp_order));
-        foreach ($_SESSION['list_products'] as $product_id => $quantity) {
-            if (get_by_column($Database, 'product', 'product_id', intval($product_id))['is_ready'] !== 0) insert_order($Database, $new_order_id, $_SESSION['vendor']['id'], get_user($Database, $_SESSION['username'])['id'], $product_id, $quantity, time());
-        }
         $this->clean_up();
         $this->indexAction();
     }

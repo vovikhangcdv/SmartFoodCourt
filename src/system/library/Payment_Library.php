@@ -80,10 +80,6 @@ class Payment_Library
 
             $partnerSignature = hash_hmac("sha256", $rawHash, $secretKey);
 
-            echo "<script>console.log('Debug huhu Objects: " . $rawHash . "' );</script>";
-            echo "<script>console.log('Debug huhu Objects: " . $partnerSignature . "' );</script>";
-
-
             if ($m2signature == $partnerSignature) {
                 if ($errorCode == '0') {
                     $result = '<div class="alert alert-success"><strong>Payment status: </strong>Success</div>';
