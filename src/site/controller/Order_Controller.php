@@ -142,7 +142,5 @@ class Order_Controller extends Base_Controller
         $this->library->load('Payment');
         $Payment = new Payment_Library();
         $Payment->init_payment($temp_order->get_total(),$order_id);
-        $this->clean_up();
-        $this->indexAction();
     }
 }
