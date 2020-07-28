@@ -22,7 +22,7 @@ class Payment_Library
         $orderId = time() . "";
         $amount = (string)($amount);
         $returnUrl = "http://"."$_SERVER[HTTP_HOST]"."?c=payment&a=result";
-        $notifyurl = "http://localhost:8080/paymomo/ipn_momo.php";
+        $notifyurl = "http://"."$_SERVER[HTTP_HOST]"."?c=payment&a=ipn_momo";
         // Lưu ý: link notifyUrl không phải là dạng localhost
         $extraData = "merchantName=MoMo Partner";
 

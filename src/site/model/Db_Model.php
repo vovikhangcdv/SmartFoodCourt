@@ -249,4 +249,14 @@ function update_by_column($Database,$table, $column, $value,$condition_column, $
     $Database->query($statement, "ss", array($value,$condition_value));
     return $Database->getError();
 }
+function count_distinct($Database,$table,$column){
+    $statement = "SELECT COUNT(DISTINCT ${column}) as counter FROM ${table}";
+    $result = $Database->query($statement, "", array());
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output[0];
+    } else return false;
+}
 ?>
