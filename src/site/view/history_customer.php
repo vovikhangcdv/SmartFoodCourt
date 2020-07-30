@@ -130,7 +130,7 @@
                         <div class="panel panel-info panel-shadow">
                             <div class="panel-heading">
                                 <h3>
-                                    <img class="img-circle img-thumbnail" src="https://bootdey.com/img/Content/user_3.jpg">
+                                    <img class="img-circle img-thumbnail" src="assets/img/avatars/<?= $header['user']['id']%8 +1?>.jpg">
                                     <?= htmlentities($bill['user']['fullname'], ENT_QUOTES, "UTF-8") ?>
                                 </h3>
                             </div>
