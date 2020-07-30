@@ -1,0 +1,772 @@
+commit 24e86910dc179ac0b4e395b9a7066bc937cd6cb0
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Tue Jul 28 19:31:07 2020 +0700
+
+    Handle result for payment process
+
+commit 64dedcdc10f02d5458a72bc043ec385944cbdcfe
+Merge: b2e7f1b 2ae430a
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Tue Jul 28 19:24:30 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 2ae430a368d77dc015596fe9e386fe1bac74c4e3
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 18:26:24 2020 +0700
+
+    Remove delete button in vendor management
+
+commit 2994ebd63a57ca3a9e019584f1979915917acdd2
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 18:22:33 2020 +0700
+
+    Update counter view with real data
+
+commit 41d7ee54c66b88995feb58f459250b36daa691c0
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 16:11:08 2020 +0700
+
+    Fix insert order to database after payment
+
+commit 80e083f6b955ca23ba2a72507108b76202af1d1f
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 15:51:36 2020 +0700
+
+    Update team info at README.md
+
+commit 35caf5326ed2ddff2a56a4ca8dcb43c559fa45f9
+Merge: cf8fb43 fa4fe56
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 15:48:42 2020 +0700
+
+    Add file _nav.scss
+
+commit cf8fb436ef12dd5c8596cb414df306cc6ab44281
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 15:42:39 2020 +0700
+
+    Update payment feature and order controller
+
+commit fa4fe56fcb52e601d9a5e2362235bca30a3e0cce
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Tue Jul 28 15:18:30 2020 +0700
+
+    Update Order controller and fix Payment_Library
+
+commit 43aeedfce7eb190b726f0d3509ba4cb80b52cf6e
+Author: Hoangkhoaa <nhk9200@gmail.com>
+Date:   Tue Jul 28 15:00:56 2020 +0700
+
+    Add view for Payment feature
+
+commit 5901298bf2f2a43576491ad95855398ebf1ca77c
+Author: Van Khoa <khoagcon2742000@gmail.com>
+Date:   Tue Jul 28 14:49:04 2020 +0700
+
+    Add nav-bg-hold  for nav bar
+
+commit 630bbee1cc47e29ff4c9a54769a92046a97dd8a1
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 14:10:48 2020 +0700
+
+    Edit insert_order function
+
+commit d966ff41662012d625e193e9d91bb14b508288cf
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jul 28 09:04:50 2020 +0700
+
+    Handle conflict
+
+commit b2e7f1b01450c25b22c51fd3d8bc2fcf4a79b96b
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jul 27 18:24:42 2020 +0700
+
+    Update Helper_Mode for Payment features
+
+commit 19149416a9260405dd2becaa6b5751fb5cea708c
+Merge: 0c66d25 cf8227d
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jul 27 18:17:08 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 0c66d25e8b1eb9fbcd2f47d8a3e93061558428d7
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jul 27 18:16:53 2020 +0700
+
+    Do nothing
+
+commit cf8227ddfe4017c416951f64efe5a8a26dd90003
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jul 27 17:51:35 2020 +0700
+
+    Add Payment_Library for Momo payment
+
+commit 0a8e6faf0d8819c5e452bf0bcc3b8cc1cc5945e3
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 30 00:40:50 2020 +0700
+
+    Fix header and footer link
+
+commit ca9a6f0fb059543dbc247094eaa79facfe025309
+Merge: f108906 87ec3c0
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 30 00:35:51 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit f10890631cd1f770c66fedf955a3277d9139a38a
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 30 00:35:14 2020 +0700
+
+    Remove useless button in admin panel
+
+commit 87ec3c06beabb7067fb489c996c77ab4e3803f6e
+Merge: 8177213 180b423
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 23:10:07 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 81772138953900589e918d5e26aedead931103dd
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 23:09:40 2020 +0700
+
+    Modidy contact.php to show our team information, delete some buttons on footer.php file, relocate map.php
+
+commit 180b423970c3551c659d3503f8400b8c40f1551c
+Merge: d168161 53e1fd6
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 22:58:06 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit d1681616fb5ad116749f351534977eeb808f50a8
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 22:57:59 2020 +0700
+
+    Modify click-next button position on vendor-list
+
+commit 53e1fd670554408f75dd4541aa03b32a14db5398
+Author: Van Khoa <khoagcon2742000@gmail.com>
+Date:   Mon Jun 29 22:54:00 2020 +0700
+
+    Modified Our_team
+
+commit ad72e1f832e3817e95278348a6c720211a3e0282
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 22:45:35 2020 +0700
+
+    Add food info in vendor list slider
+
+commit 3375498de4cd12078dab8e6c837bbac2c129d147
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 22:13:49 2020 +0700
+
+    Fix bug switch category tab in menu.php
+
+commit ed2fb59fb05735c0a233d7d433604611631622ae
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 21:41:02 2020 +0700
+
+    Update build_server.md: add instructions to update the database
+
+commit 8b6624740ad4b96cbcf2b246df793560eeefd615
+Merge: 5d4c4f8 46bbd6e
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 21:33:17 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 46bbd6e219a8966d9729181269ccc81ce040fe4b
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 21:21:10 2020 +0700
+
+    Update database
+
+commit 5d4c4f8836121831bb724aa03098905a70a2bd84
+Merge: 629da32 e27c2ce
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 21:18:31 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit e27c2ceea3fdfa35f1e816fc651847348c2869c7
+Merge: 48c6c42 c5a83d5
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 21:17:47 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 48c6c42b24e1cf71a946d93b9c4fd268f3ae3107
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 29 21:16:58 2020 +0700
+
+    Change food name and database
+
+commit 629da3243b2720b3560adf5ec8a76e5e2eff06ef
+Merge: deb3213 c5a83d5
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 21:16:35 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit c5a83d521c81f11c3846c7c61b8241cd0a6bc696
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 21:13:54 2020 +0700
+
+    Add feature: cook view order , set order ready
+
+commit deb3213e7c1deed7b6b31d445e886aec671191a1
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Mon Jun 29 21:10:28 2020 +0700
+
+    Edit Class Bill
+
+commit 97ca5543b487ccfd14ded4fc5f7ac09d0dbed22f
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 21:06:31 2020 +0700
+
+    Fix header for cook
+
+commit 407f59148bbe64ef0a294ce3aa6d75c152723f2a
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 21:04:42 2020 +0700
+
+    Modify about_us.php, contact.php and add a picture
+
+commit b9711eda60dbbfe3714c756aedb948be23107903
+Merge: 42a3a97 84c7634
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 20:04:38 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 42a3a97afbadb9026f7cb9f08831cee4219e3de0
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Mon Jun 29 19:58:51 2020 +0700
+
+    Modify link ref in our_team.php file
+
+commit 84c7634756e35c5bd44de79dd1f022e44e4fa4b4
+Author: Van Khoa <khoagcon2742000@gmail.com>
+Date:   Mon Jun 29 18:49:23 2020 +0700
+
+    Completed About_us
+
+commit d3699e90cd68d07d82b21a1ec9c619a1bfd9594b
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Sun Jun 28 16:39:36 2020 +0700
+
+    Add vendor_view_history.php file, vendor can view all history bill and make report, in view directory
+
+commit 53693576030b6092659c410679df4f3ccc046c5b
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Fri Jun 26 21:47:52 2020 +0700
+
+    add Logo and modify text in client_testimonical.php
+
+commit c77587ab233e1365f350027e749c6412640b9d23
+Merge: a903315 f84b644
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 25 14:47:06 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit a903315fb18de8020b508302d0df491e0081d7c2
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 25 14:47:01 2020 +0700
+
+    Update view
+
+commit f84b6442ae839a5184c52be931f0c74724ef363f
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Thu Jun 25 14:45:21 2020 +0700
+
+    Edit backend for modify_menu.php
+
+commit c8b2b9f2494d0e69fc58c12cfdc2c5205a8be474
+Merge: 994b6c3 62e9053
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Wed Jun 24 20:08:05 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 994b6c3ea332a74cff6664808ce0655844c2df31
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Wed Jun 24 18:49:53 2020 +0700
+
+    Update UI for menu.php and add cook_view_order.php
+
+commit 8cb89a84bc5f5773ad8c691e22e23f8205b509e8
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 24 18:07:10 2020 +0700
+
+    Finish feature Modify menu: add,remove  category, product; Update index layout; Add Tool_Model.php; Update Base and Auth controller
+
+commit 62e9053d19601617c0ec85cc244f99234bb204f4
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 24 18:02:01 2020 +0700
+
+    update database
+
+commit 6a7b06e6968f9750903834151a18dc023da414d3
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 17:40:51 2020 +0700
+
+    Add feature: Create Vendor. Update Admin management panel
+
+commit 70f727d0b85f348ca4b9218a5a0633caccc39242
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 14:00:10 2020 +0700
+
+    Fix display for vendor choosing page
+
+commit 6605bed1890da5150bfb96933d739297af9a3d5c
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 04:27:45 2020 +0700
+
+    Update database
+
+commit 9bcbd13ea62f299483704b12071bdb957e530bcd
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 04:26:21 2020 +0700
+
+    Finish feature: Admin add user with role
+
+commit 418944c64d920a606af0ee3490c13c8e1a932bc0
+Merge: 14a0489 7520a1a
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 01:18:21 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 14a04897a98e10102ae82c3445ce9c1a8cad464e
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 23 01:17:51 2020 +0700
+
+    Add admin(IT STAFF) feature (controller): management, view, update user info. Add Load_page_Controller.php, feature: profile, edit profile(account). Update: header.php, signup_Controller.php
+
+commit 7520a1a4df794e1d0814a52c6996adf19dbfab83
+Author: HoangKhoa <nhk9200@gmail.com>
+Date:   Mon Jun 22 23:30:58 2020 +0700
+
+    Change vendor's description
+
+commit a63053bb451239270b8161bb07ea30d69fdca6f3
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Sat Jun 20 03:24:48 2020 +0700
+
+    Change file Order_Library.php to Bill_Library.php and resolve confict in Order_Controller.php; add view 'history_customer.php'; prevent XSS in cart.php;
+
+commit 923bf5d2b37d9d6df29f1ea407f1ebb5c9abd955
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 19 22:17:38 2020 +0700
+
+    finish commitAction in Order_Controller.php;edit view 'menu' to show unavailable product;add view 'our_team.php'
+
+commit e524482cad625f2b8319b7151bb8b5b0bc3f0461
+Merge: bc35fe1 e88ba1a
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 19 14:27:25 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit bc35fe1e2ed279fa9b0cf01496415f9a93845ffd
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 19 14:26:12 2020 +0700
+
+    update feature edit cart: card.php, Order_controller.php
+
+commit e88ba1a3ef4aca082d096d4a9ab7413dd937fa77
+Author: = <quoc.khanh.ut.0212@email.com>
+Date:   Fri Jun 19 13:03:30 2020 +0700
+
+    Design page for manager can view history report
+
+commit f8b7ccbce1aab188ea01c0179fec27b46ce0e284
+Author: = <akate@Ngos-MacBook-Pro.local>
+Date:   Fri Jun 19 12:35:08 2020 +0700
+
+    Add manager_view_report.php file
+
+commit 2b5f4cadd5aa39bf7f1ce133fdae74a1722338dd
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 11:50:46 2020 +0700
+
+    Add Test_Controller.php, edit Order_Controller.php, edit some links and content in header.php and slider.php
+
+commit 1b7236ab0988148c36c23d1c8530db94fd35d019
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 11:03:22 2020 +0700
+
+    Remove the now ignored directory .idea
+
+commit 399a5d57d41a28a2e41117b4c9c4799027b6f8d3
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 10:59:57 2020 +0700
+
+    Update add information about project to README.md (2)
+
+commit e00739f6c4fde70983cc9c48eb04cdbe84590d6a
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 10:58:43 2020 +0700
+
+    Update add information about project to README.md
+
+commit a3f4d5406a50adf4ce976d6b76a5bc07c062c346
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 10:37:56 2020 +0700
+
+    RESTART PROJECT: clean up unuseful files, update database file, resolve conficts.
+
+commit 6ffd053d6872d65d3a597bb7fae94acfa1f66485
+Merge: 90b2d91 fe704d1
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Tue Jun 16 10:37:38 2020 +0700
+
+    RESTART PROJECT: clean up unuseful files, update database file, resolve conficts.
+
+commit 90b2d9181d419e91e069904a1282b6bd8069a71e
+Merge: f36af30 e61cbbd
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Sun Jun 14 23:21:14 2020 +0700
+
+    nothing
+
+commit fe704d1df998cff16d6a86f131e29bb90995dcdf
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Sat Jun 13 05:04:53 2020 +0700
+
+    update modify_menu
+
+commit a9c508b0589d16d5b46ee12305228a421a7e23c4
+Merge: b39af1b cd45c67
+Author: = <=>
+Date:   Sat Jun 13 03:08:55 2020 +0700
+
+    commit change
+
+commit b39af1b30ea058377abab289b16b7060d73db994
+Author: = <=>
+Date:   Sat Jun 13 03:07:16 2020 +0700
+
+    commit history_page and add owner_view_page.php
+
+commit cd45c67ee8babe82cf8826732af515f4c720a4c9
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Sat Jun 13 03:04:52 2020 +0700
+
+    add modify_menu
+
+commit f36af30ef3a3a801b405f4695433fcd18fbc6504
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 12 23:36:36 2020 +0700
+
+    update Order_Controller.php, add class Order
+
+commit f94a5b346476095578cf45bd7fb0cecfa784110f
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 18:55:52 2020 +0700
+
+    wassup
+
+commit b8eef004f82648f14b23da011b6a2493f390d5d3
+Merge: e9744fc e61cbbd
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 18:51:32 2020 +0700
+
+    test
+
+commit c61f50821cba867fef9934ddda8ebbe03527f57f
+Merge: db036c0 e61cbbd
+Author: = <=>
+Date:   Fri Jun 12 18:50:47 2020 +0700
+
+    commit
+
+commit e9744fc483a08d1073da0225d1b02588a753aa07
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 18:48:45 2020 +0700
+
+    khoa test
+
+commit e61cbbd36c752a89d8d5457091dffd7c83f38220
+Merge: 8e43e3f 06ab804
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Fri Jun 12 18:46:21 2020 +0700
+
+    edit
+
+commit db036c034149e1f1d1c059c19654a2d2c9dd5a5b
+Author: = <=>
+Date:   Fri Jun 12 18:44:24 2020 +0700
+
+    change something
+
+commit 8e43e3fc70e2dcbdf6763741046f363cd2a25a6b
+Merge: b528964 12873b6
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Fri Jun 12 18:33:15 2020 +0700
+
+    wassup
+
+commit 06ab80426bfb12c20624e162be3a283b1bb54738
+Merge: 7601572 12873b6
+Author: = <=>
+Date:   Fri Jun 12 18:32:23 2020 +0700
+
+    m
+
+commit 7601572c950a980a32f1c80cc0503a1bfc09dd61
+Author: = <=>
+Date:   Fri Jun 12 18:30:59 2020 +0700
+
+    add history_page
+
+commit b528964292776f7620a9d577be4e191953bdd2b1
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Fri Jun 12 18:26:17 2020 +0700
+
+    wassup
+
+commit 12873b68bce427a998cff03c72bbe0f9cfcce870
+Merge: 329593e fa42f48
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 18:24:14 2020 +0700
+
+    update vendors list
+
+commit 329593e7638b9531eb4b93f63e8bf7a4be472f37
+Merge: 7a73cd6 c5abd89
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 18:22:10 2020 +0700
+
+    update vendor list page
+
+commit fa42f4836dfe2831b7c3e34b884dc76f32c40351
+Merge: 19a60d2 c5abd89
+Author: = <=>
+Date:   Fri Jun 12 18:17:22 2020 +0700
+
+    add history_page
+
+commit 19a60d2ea64c726a4bc28c9fa3fbaf73539d6eca
+Author: = <=>
+Date:   Fri Jun 12 18:14:24 2020 +0700
+
+    add history_page.php file and change Index_controller.php
+
+commit 7a73cd6e5dc8a6d12c8b2618d970d7e0d6289e45
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 17:32:15 2020 +0700
+
+    vendor-list update
+
+commit f9a69345c40c912d178dd9af9d3d64fb2db44d45
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Fri Jun 12 17:29:57 2020 +0700
+
+    vendor list
+
+commit c5abd8994e0043d9b7ca0908a26cfc59d9c70417
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 12 16:44:24 2020 +0700
+
+    update database
+
+commit a02452d72e2ab1eecca79a1d65c4d19b7facd24d
+Merge: 62c549b 56ec812
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 12 16:42:39 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 62c549b6c7f414a94967f0c6d00d28f251391786
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Fri Jun 12 16:42:23 2020 +0700
+
+    add Order_Controller.php
+
+commit 56ec812b3f4df7f6e8cbb0cc4c005c731272d53b
+Merge: 78bade1 28daff7
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Fri Jun 12 15:33:12 2020 +0700
+
+    add Cart.php
+
+commit 78bade17fa1ff922fd2a4836ce53de127c1bcb83
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 19:18:23 2020 +0700
+
+    Trash
+
+commit 28daff7b97284b444e2dcf770509aef12f56d36a
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 17:52:46 2020 +0700
+
+    add signup, signin feature
+
+commit 68baae001e05cf363ce7606d0c92e583578f6531
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 15:44:13 2020 +0700
+
+    edit Index_Controller, add buttom add to cart
+
+commit 9cac659d9a79480dd19d724a33368e1d92b18940
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 15:22:48 2020 +0700
+
+    update database
+
+commit 58fd78c6bbc13e082e055be085a6ef9efc1d6e62
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 15:20:47 2020 +0700
+
+    done Index_Controller
+
+commit 4d570564f2b49ebd388b470079fcb18834050945
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 15:19:12 2020 +0700
+
+    done Index_Controller
+
+commit 19d5c84381539a783da4eb987d147b0cb99e41bc
+Merge: 591ceaf 8888983
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 14:32:12 2020 +0700
+
+    pass data to menu
+
+commit 591ceaf2eae235d9c01b593e8ceb3c2e953fc7f7
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 14:31:17 2020 +0700
+
+    pass data menu
+
+commit 8888983619b130b98f0c864f546a1e9f37274daa
+Merge: ab4ed3f a68813d
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 09:05:42 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit ab4ed3f59c7172342cb368929b63b5e65fa27eb2
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 09:03:17 2020 +0700
+
+    Modify some file
+
+commit a68813dca361a4d3befdb4657a59d68f0f3d0489
+Merge: 4572aab 47375f9
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Thu Jun 11 04:28:42 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 4572aab5b78770fc2b307ec89608bd0ba43c2f47
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Thu Jun 11 04:11:57 2020 +0700
+
+    trash
+
+commit 47375f9090e77d12b9d50e32f952468762e6ec96
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 04:03:19 2020 +0700
+
+    Trash
+
+commit 3b212943d6806e5489a527d69af5a1b10b34f961
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 04:00:03 2020 +0700
+
+    trash
+
+commit 8687a4a0f90a72a6ad9ef2e8208622508d9ef4e4
+Merge: 17f01e1 5abcbfc
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Thu Jun 11 03:30:20 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 17f01e19dea9421071e5fdee6519f11b1b82872b
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Thu Jun 11 03:30:14 2020 +0700
+
+    trash
+
+commit 5abcbfc3a8c40a5e6319f02d2101204db1bcdd53
+Merge: 6699f03 e0a9bde
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 03:12:28 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit e0a9bde0eac76a624309d8ca835d265f236d8355
+Merge: 4b6d6f6 30095d5
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 03:09:52 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 4b6d6f6f520ee0983eafc28df6af82dfee176b4b
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 03:09:36 2020 +0700
+
+    trash commit
+
+commit 6699f03185337f611668fcd400605146e235e614
+Merge: 0338118 30095d5
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 03:06:20 2020 +0700
+
+    Merge branch 'master' of https://github.com/vovikhangcdv/SmartFoodCourt
+
+commit 03381183ce034a9a4db4952245f5db69d9dab883
+Author: cOrN_ak <khoa.ngobk@hcmut.edu.vn>
+Date:   Thu Jun 11 03:03:59 2020 +0700
+
+    Trash commit
+
+commit 30095d554b5bf9846d9a401e7628214440fdb7ac
+Author: Hoang Khoa <nhk9200@gmail.com>
+Date:   Thu Jun 11 02:56:18 2020 +0700
+
+    update image
+
+commit 9b0933dbb481b85bcce0ea36561668c515d262a5
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 02:44:40 2020 +0700
+
+    Khang-Merge
+
+commit a52f09ee594353f9f26bb18cd6fe31197530eb85
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Thu Jun 11 00:01:34 2020 +0700
+
+    edit build_build_server.md
+
+commit 7882701a68b2fd7cc0ba922c7335ae4ffe0ba7f9
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 10 23:55:30 2020 +0700
+
+    update file database
+
+commit 588de9a62edcd090a6459daf1b32ed0f2e3777ae
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 10 23:53:40 2020 +0700
+
+    push file database
+
+commit ed3acd52ee5be697c675e4f0ffb6134fed27281d
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 10 21:53:26 2020 +0700
+
+    Template MVC
+
+commit 8496cb7c812a743270824bf69a17a504ac5e9adc
+Author: DoubleVKay <vovikhangcdv@gmail.com>
+Date:   Wed Jun 10 20:38:58 2020 +0700
+
+    Init commit
