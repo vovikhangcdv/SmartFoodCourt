@@ -37,9 +37,6 @@
                 </div>
                 </div>
                 </form>
-                <?php if ($current_user['id'] !== $info['id']): ?>
-                <a class="btn btn-block btn-success" type="submit" href='../index.php?c=message&id=<?= $info['id']?>'>Inbox</a>
-                <?php endif;?>
                 <div style='display:<?=(isset($message) and $message != NULL) ? "block" : "none" ?>'>
                     <br>
                     <div class=<?=$return ? "'alert alert-success'" : "'alert alert-danger'" ?> role="alert"><?=(isset($message) and $message != NULL) ? $message : "" ?></div>
