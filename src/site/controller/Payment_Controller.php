@@ -8,7 +8,6 @@ class Payment_Controller extends Auth_Controller {
             # Insert order to database
             global $Database;
             $this->model->load('Db');
-            $this->config->load('debug_config');
             $order_id = get_max_order_id($Database);
             if ($order_id === false) die('Error');
             $new_order_id = $order_id + 1;
