@@ -9,7 +9,7 @@
           <div class="mu-top-slider-single">
             <img src="<?= xss_filter($vendor['photo']) ?>" style="width:100vw;height:950px" alt="img">
             <!-- Top slider content -->
-            <div style="margin-top:30px" class="mu-top-slider-content"><br><br>
+            <div style="margin-top:0px" class="mu-top-slider-content"><br><br>
               <h2 class="mu-slider-title"><?= xss_filter($vendor['name']) ?></h2>
               <p>"<?= xss_filter($vendor['description']) ?>"</p>
               <a href="<?= PATH_INDEX ?>?c=order&a=set_vendor&vendor_id=<?= $vendor['id'] ?>" class="mu-readmore-btn">View all food</a>

@@ -259,4 +259,14 @@ function count_distinct($Database,$table,$column){
         return $output[0];
     } else return false;
 }
+function get_orders_vendor_owner_by_time($Database,$vendor_id,$time_start,$time_end){
+    $statement = "SELECT * from orders where vendor_id=? and timestamp_order >= ? and timestamp_order <= ?";
+    $result = $Database->query($statement, "iii", array($vendor_id,$time_start,$time_end));
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $output[] = $row;
+        }
+        return $output;
+    } else return false;
+}
 ?>

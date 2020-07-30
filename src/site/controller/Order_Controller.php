@@ -52,7 +52,8 @@ class Order_Controller extends Base_Controller
         $data['additional_money'] = $temp_order->get_additional_money();
         $data['total'] = $temp_order->get_total();
         $this->load_header('header',$data);
-        $this->view->load('slider',$data);
+        $data['vendor'] = $_SESSION['vendor'];
+        $this->view->load('static_slider',$data);
         $this->view->load('cart',$data);
         $this->view->load('footer',$data);
     }
@@ -121,7 +122,8 @@ class Order_Controller extends Base_Controller
         }
         $data['vendor_id'] = $_SESSION['vendor']['id'];
         $this->load_header('header',$data);
-        $this->view->load('slider', $data);
+        $data['vendor'] = $_SESSION['vendor'];
+        $this->view->load('static_slider',$data);
         $this->view->load('menu', $data);
         $this->view->load('footer', $data);
     }

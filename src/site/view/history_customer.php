@@ -74,7 +74,7 @@
                 <div class="mu-restaurant-menu-area">
                     <div class="mu-title" style="padding-bottom:40px">
                         <span class="mu-subtitle">History</span>
-                        <h2>Ordered MENU</h2>
+                        <h2>Ordered List</h2>
                         <?php $menu = $list_vendor[$vendor_id]; ?>
                         <i class="fa fa-spoon"></i>
                         <span class="mu-title-bar"></span>

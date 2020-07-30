@@ -31,7 +31,7 @@
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>        
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
-    
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,7 +85,8 @@
                 <?php if($_SESSION['role'] === 3): ?>
                 <li><a href="<?= PATH_INDEX ?>?c=bill&a=getBillCook">View Order</a></li>  
                 <?php endif;?> 
-                <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>                                          
+                <li><a href="<?= PATH_INDEX ?>?c=modify_menu">Modify Menu</a></li>
+                <li><a href="<?= PATH_INDEX ?>?c=report">Vendor Report</a></li>                                                                                    
               </ul>
             </li>
             <?php endif; ?>

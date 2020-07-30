@@ -8,10 +8,12 @@ class Modify_menu_Controller extends Auth_Controller {
     }
     public function indexAction($data=array()) {
         global $Database;
+        $data['vendor'] = get_by_column($Database,'vendor','id',$_SESSION['own_vendor_id']);
+        $data['title'] = "Modify Menu";
         $data['list_category'] = get_all_by_column($Database,'category_product','vendor_id',$_SESSION['own_vendor_id']);
         $data['list_product'] = get_all_by_column($Database,'product','vendor_id',$_SESSION['own_vendor_id']);
         $this->load_header('header',$data);
-        $this->view->load('slider',$data);
+        $this->view->load('static_slider',$data);
         $this->view->load('modify_menu',$data);
         $this->view->load('footer',$data);
     }
