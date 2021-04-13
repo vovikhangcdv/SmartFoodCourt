@@ -1,7 +1,5 @@
 # BKSmartFoodCourt
 
-The site is already available at: [BK Smart Food Court Website](http://sangvh.cf/)
-
 ## Introduction
 This project is website BK Smart Food Court - the food ordering website.
 
